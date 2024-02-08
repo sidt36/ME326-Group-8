@@ -1,4 +1,5 @@
 from setuptools import setup
+from glob import glob
 
 package_name = 'final_project'
 
@@ -10,7 +11,9 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/final_project/launch', ['launch/project_launcher.py'])
+        ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
+        ('share/' + package_name + '/model', glob('model/*.urdf')),
+        
     ],
     install_requires=['setuptools', 'numpy', 'scipy'],
     zip_safe=True,
@@ -21,7 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'project_launcher = final_project.project_launcher:main',
+            'project_launcher = final_project.project.launch:main',
         ],
     },
 )
