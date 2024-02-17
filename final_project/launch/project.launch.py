@@ -36,6 +36,14 @@ def generate_launch_description():
                                  'launch/spawn_cube.launch.py')
                 )
             )
+        ]),
+        TimerAction(period=5.0, actions=[
+            Node(
+                package='pose_traj_controller',
+                executable='pose_traj_controller',
+                name='pose_traj_controller_node',
+                output='screen',
+            )
         ])
     ])
 
