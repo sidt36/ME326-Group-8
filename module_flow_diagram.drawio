@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-25T22:32:43.762Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="0dPyIP75hR7W5bYqusO4" version="23.1.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-25T22:35:21.140Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="TTFQLD-0dI8GE3q4GQqB" version="23.1.6" type="github">
   <diagram name="Page-1" id="46Z5bhGNHUr1S8s_8vQ9">
     <mxGraphModel dx="954" dy="558" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -70,7 +70,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Oh1XiBFId6qo2hWSy4nC-20" value="Occupancy Map" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="330" y="280" width="60" height="30" as="geometry" />
+          <mxGeometry x="400" y="280" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Oh1XiBFId6qo2hWSy4nC-21" value="&amp;nbsp;Base &lt;br&gt;Pose" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="490" y="280" width="70" height="30" as="geometry" />
@@ -119,6 +119,15 @@
               <mxPoint x="270" y="380" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh1XiBFId6qo2hWSy4nC-35" value="Relative Pose" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="140" y="280" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh1XiBFId6qo2hWSy4nC-37" value="Block Color" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="280" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh1XiBFId6qo2hWSy4nC-38" value="Arm Planning and Control (Moveit API)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="590" y="380" width="130" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
