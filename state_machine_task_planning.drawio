@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-02-25T23:29:24.986Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="SiHX4BtnLQzFwSHDADo1" version="23.1.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-25T23:41:22.014Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="9yG6ndbF4REWJvJ8aELy" version="23.1.6" type="github">
   <diagram name="Page-1" id="wCWra6xxkZbTgV-Bye85">
     <mxGraphModel dx="954" dy="558" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -119,8 +119,8 @@
         <mxCell id="UYnusm4cooaI_DaDo-KD-36" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Until Success&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="375" y="130" width="70" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="UYnusm4cooaI_DaDo-KD-37" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;Cobot Target Pattern&amp;nbsp;Built?&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="483" y="280" width="97" height="93" as="geometry" />
+        <mxCell id="UYnusm4cooaI_DaDo-KD-37" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;Co-bot Target Pattern&amp;nbsp;April Tag Found?&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="478" y="280" width="107" height="90" as="geometry" />
         </mxCell>
         <mxCell id="UYnusm4cooaI_DaDo-KD-38" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;fontSize=11;" edge="1" parent="1" source="UYnusm4cooaI_DaDo-KD-34">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -128,8 +128,65 @@
             <mxPoint x="470" y="190" as="targetPoint" />
             <Array as="points">
               <mxPoint x="780" y="130" />
-              <mxPoint x="510" y="80" />
+              <mxPoint x="510" y="110" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-39" value="Until target pattern is in place" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="90" width="187" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-40" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="UYnusm4cooaI_DaDo-KD-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="326" as="sourcePoint" />
+            <mxPoint x="630" y="326" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-41" value="&lt;i&gt;Note: A deficiency of blocks has to addressed by suitable interupts to the flow of contol&lt;/i&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="284" y="50" width="495" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-42" value="False" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="573" y="302" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-43" value="Move to Resource April Tag" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="630" y="310" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-44" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Rotate Robot 360&lt;sup style=&quot;font-size: 11px;&quot;&gt;o&lt;/sup&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="630" y="245" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-45" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="UYnusm4cooaI_DaDo-KD-43" target="UYnusm4cooaI_DaDo-KD-44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="310" as="sourcePoint" />
+            <mxPoint x="460" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-49" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="UYnusm4cooaI_DaDo-KD-44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="310" as="sourcePoint" />
+            <mxPoint x="530" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-50" value="&lt;i&gt;Exception Handling to Break this Loop&lt;/i&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="740" y="280" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-51" value="True" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="483" y="380" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-52" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=11;" edge="1" parent="1" source="UYnusm4cooaI_DaDo-KD-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="531" y="380" as="sourcePoint" />
+            <mxPoint x="531" y="418" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-53" value="Move to Resource April Tag" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="485" y="420" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-54" value="Rotate Robot towards April Tag" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="640" y="420" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-59" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=11;" edge="1" parent="1" source="UYnusm4cooaI_DaDo-KD-53">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="435" as="sourcePoint" />
+            <mxPoint x="640" y="435" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
