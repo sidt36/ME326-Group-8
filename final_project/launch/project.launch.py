@@ -35,7 +35,13 @@ def generate_launch_description():
                     os.path.join(get_package_share_directory('final_project'), 
                                  'launch/spawn_cube.launch.py')
                 )
-            )
+            ),
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
+                    os.path.join(get_package_share_directory('final_project'), 
+                                 'launch/spawn_april_tags.launch.py')
+                )
+            ),
         ]),
         TimerAction(period=5.0, actions=[
             Node(
