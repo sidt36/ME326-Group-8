@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-02-25T23:54:24.476Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="KzQzch0CtNqWNyVJZ5Ch" version="23.1.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-25T23:58:53.215Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="MU91FCm-MERcRYGV_EXI" version="23.1.6" type="github">
   <diagram name="Page-1" id="wCWra6xxkZbTgV-Bye85">
-    <mxGraphModel dx="1122" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1363" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -251,8 +251,38 @@
         <mxCell id="UYnusm4cooaI_DaDo-KD-80" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="UYnusm4cooaI_DaDo-KD-64">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="270" y="575" as="sourcePoint" />
-            <mxPoint x="300" y="565" as="targetPoint" />
+            <mxPoint x="280" y="565" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-81" value="Pick and Place Block &lt;i style=&quot;font-size: 11px;&quot;&gt;i&lt;/i&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="284" y="535" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-82" value="False" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="220" y="543" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-83" value="" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=11;" edge="1" parent="1" source="UYnusm4cooaI_DaDo-KD-81">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="455" y="480" as="sourcePoint" />
+            <mxPoint x="175" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="300" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-84" value="Until mimic pattern is in place" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="477" width="187" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-85" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=11;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="171.71" y="620" as="sourcePoint" />
+            <mxPoint x="171.71" y="650" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="171.71" y="638" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-87" value="True" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="128" y="615" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
