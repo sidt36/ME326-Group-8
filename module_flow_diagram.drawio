@@ -1,17 +1,44 @@
-<mxfile host="app.diagrams.net" modified="2024-02-25T22:13:26.609Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="A1MTm3lgYiVVRju59dpg" version="23.1.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-25T22:17:52.960Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="2EUry7tUXU6yaM05G1d0" version="23.1.6" type="github">
   <diagram name="Page-1" id="46Z5bhGNHUr1S8s_8vQ9">
     <mxGraphModel dx="954" dy="558" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="Oh1XiBFId6qo2hWSy4nC-1" value="Camera" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="120" width="100" height="40" as="geometry" />
+          <mxGeometry x="185" y="120" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="Oh1XiBFId6qo2hWSy4nC-2" value="IMU and Odometry" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="390" y="120" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Oh1XiBFId6qo2hWSy4nC-4" value="Perception" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="170" y="190" width="160" height="50" as="geometry" />
+        <mxCell id="Oh1XiBFId6qo2hWSy4nC-4" value="Perception Modue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="190" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh1XiBFId6qo2hWSy4nC-6" value="&lt;pre style=&quot;box-sizing: border-box; line-height: 1.4; font-family: SFMono-Regular, Menlo, Monaco, Consolas, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, monospace; margin-top: 0px; margin-bottom: 0px; padding: 12px; overflow: auto; color: rgb(64, 64, 64);&quot; id=&quot;codecell0&quot;&gt;interbotix_xslocobot_nav&lt;/pre&gt;&lt;pre style=&quot;box-sizing: border-box; line-height: 1.4; font-family: SFMono-Regular, Menlo, Monaco, Consolas, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, monospace; margin-top: 0px; margin-bottom: 0px; padding: 12px; overflow: auto; color: rgb(64, 64, 64);&quot; id=&quot;codecell0&quot;&gt;(&lt;font style=&quot;background-color: initial; white-space: normal;&quot; face=&quot;Helvetica&quot;&gt;Nav Package)&lt;/font&gt;&lt;/pre&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="352.5" y="190" width="175" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Oh1XiBFId6qo2hWSy4nC-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Oh1XiBFId6qo2hWSy4nC-1" target="Oh1XiBFId6qo2hWSy4nC-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="360" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh1XiBFId6qo2hWSy4nC-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Oh1XiBFId6qo2hWSy4nC-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="sourcePoint" />
+            <mxPoint x="440" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh1XiBFId6qo2hWSy4nC-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Oh1XiBFId6qo2hWSy4nC-1" target="Oh1XiBFId6qo2hWSy4nC-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Oh1XiBFId6qo2hWSy4nC-11" value="Brain" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="335" y="350" width="210" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
