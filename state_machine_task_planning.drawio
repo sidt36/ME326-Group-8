@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-02-25T23:58:53.215Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="MU91FCm-MERcRYGV_EXI" version="23.1.6" type="github">
+<mxfile host="app.diagrams.net" modified="2024-02-26T00:00:09.430Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="wvgQhiaZFvrMCYTSOR3K" version="23.1.6" type="github">
   <diagram name="Page-1" id="wCWra6xxkZbTgV-Bye85">
-    <mxGraphModel dx="1363" dy="797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="830" dy="485" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -196,7 +196,7 @@
         <mxCell id="UYnusm4cooaI_DaDo-KD-60" value="Update Mimic Pattern" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="18" y="420" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="UYnusm4cooaI_DaDo-KD-64" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Mmic Pattern Built?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="UYnusm4cooaI_DaDo-KD-64" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Mimic Pattern Built?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="118" y="510" width="108" height="110" as="geometry" />
         </mxCell>
         <mxCell id="UYnusm4cooaI_DaDo-KD-65" value="Co-bot Target Pattern Ready?&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -283,6 +283,9 @@
         </mxCell>
         <mxCell id="UYnusm4cooaI_DaDo-KD-87" value="True" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="128" y="615" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UYnusm4cooaI_DaDo-KD-88" value="Stop" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="147" y="650" width="50" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
