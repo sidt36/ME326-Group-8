@@ -1,0 +1,892 @@
+[0.000000] (-) TimerEvent: {}
+[0.009956] (pose_traj_controller) JobQueued: {'identifier': 'pose_traj_controller', 'dependencies': OrderedDict()}
+[0.010705] (pose_traj_controller) JobStarted: {'identifier': 'pose_traj_controller'}
+[0.151430] (-) TimerEvent: {}
+[0.283486] (-) TimerEvent: {}
+[0.396683] (-) TimerEvent: {}
+[0.510609] (-) TimerEvent: {}
+[0.635191] (-) TimerEvent: {}
+[0.750718] (-) TimerEvent: {}
+[0.859203] (-) TimerEvent: {}
+[0.987248] (-) TimerEvent: {}
+[1.047030] (pose_traj_controller) JobProgress: {'identifier': 'pose_traj_controller', 'progress': 'cmake'}
+[1.047713] (pose_traj_controller) Command: {'cmd': ['/usr/bin/cmake', '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller', '-DCMAKE_INSTALL_PREFIX=/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller'], 'cwd': '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sid'), ('SSH_AGENT_PID', '1152'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sid/interbotix_ws/install/moveit_visual_tools/lib:/home/sid/interbotix_ws/install/interbotix_xs_rviz/lib:/home/sid/interbotix_ws/install/interbotix_xs_ros_control/lib:/home/sid/interbotix_ws/install/interbotix_xs_msgs/lib:/home/sid/interbotix_ws/install/interbotix_tf_tools/lib:/home/sid/interbotix_ws/install/interbotix_perception_msgs/lib:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/sid'), ('OLDPWD', '/home/sid/autonomy_ws/src/ME326-Group-8-new'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '809'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sid/interbotix_ws/install:/home/sid/autonomy_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sid'), ('JOURNAL_STREAM', '8:33477'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sid'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/sid/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sid-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1247,unix/sid-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1247'), ('INVOCATION_ID', '8ca18d04e58849bf8b5d21da1001e1e5'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/df498662_9e05_4791_827c_4dc169715d83'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('INTERBOTIX_XSLOCOBOT_BASE_TYPE', 'create3'), ('GNOME_TERMINAL_SERVICE', ':1.88'), ('INTERBOTIX_WS', '/home/sid/interbotix_ws'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sid/autonomy_ws/install/s2_basic:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_moveit_interface:/home/sid/interbotix_ws/install/moveit_visual_tools:/home/sid/interbotix_ws/install/interbotix_xslocobot_sim:/home/sid/interbotix_ws/install/interbotix_xslocobot_moveit:/home/sid/interbotix_ws/install/interbotix_xslocobot_descriptions:/home/sid/interbotix_ws/install/interbotix_xs_toolbox:/home/sid/interbotix_ws/install/interbotix_xs_rviz:/home/sid/interbotix_ws/install/interbotix_xs_ros_control:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_toolbox:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_perception_pipelines:/home/sid/interbotix_ws/install/interbotix_xs_msgs:/home/sid/interbotix_ws/install/interbotix_tf_tools:/home/sid/interbotix_ws/install/interbotix_perception_msgs:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs:/home/sid/interbotix_ws/install/interbotix_common_toolbox:/home/sid/interbotix_ws/install/interbotix_common_sim:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('ROS_DISCOVERY_SERVER', '192.169.0.11:11811'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sid/autonomy_ws/install/final_project/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_xs_modules/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_perception_modules/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_xs_msgs/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_perception_msgs/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_common_modules/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sid/autonomy_ws/install/s2_basic:/home/sid/interbotix_ws/install/interbotix_moveit_interface:/home/sid/interbotix_ws/install/moveit_visual_tools:/home/sid/interbotix_ws/install/interbotix_xslocobot_sim:/home/sid/interbotix_ws/install/interbotix_xslocobot_moveit:/home/sid/interbotix_ws/install/interbotix_xslocobot_descriptions:/home/sid/interbotix_ws/install/interbotix_xs_toolbox:/home/sid/interbotix_ws/install/interbotix_xs_rviz:/home/sid/interbotix_ws/install/interbotix_xs_ros_control:/home/sid/interbotix_ws/install/interbotix_perception_toolbox:/home/sid/interbotix_ws/install/interbotix_perception_pipelines:/home/sid/interbotix_ws/install/interbotix_xs_msgs:/home/sid/interbotix_ws/install/interbotix_tf_tools:/home/sid/interbotix_ws/install/interbotix_perception_msgs:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs:/home/sid/interbotix_ws/install/interbotix_common_toolbox:/home/sid/interbotix_ws/install/interbotix_common_sim:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic')]), 'shell': False}
+[1.094137] (-) TimerEvent: {}
+[1.198001] (-) TimerEvent: {}
+[1.299862] (-) TimerEvent: {}
+[1.403460] (-) TimerEvent: {}
+[1.508422] (-) TimerEvent: {}
+[1.612906] (-) TimerEvent: {}
+[1.719798] (-) TimerEvent: {}
+[1.823361] (-) TimerEvent: {}
+[1.926586] (-) TimerEvent: {}
+[2.032188] (-) TimerEvent: {}
+[2.136672] (-) TimerEvent: {}
+[2.239812] (-) TimerEvent: {}
+[2.345661] (-) TimerEvent: {}
+[2.449677] (-) TimerEvent: {}
+[2.553096] (-) TimerEvent: {}
+[2.657556] (-) TimerEvent: {}
+[2.761742] (-) TimerEvent: {}
+[2.864515] (-) TimerEvent: {}
+[2.906156] (pose_traj_controller) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[2.965883] (-) TimerEvent: {}
+[3.067953] (-) TimerEvent: {}
+[3.172965] (-) TimerEvent: {}
+[3.275171] (-) TimerEvent: {}
+[3.378660] (-) TimerEvent: {}
+[3.481533] (-) TimerEvent: {}
+[3.587035] (-) TimerEvent: {}
+[3.689547] (-) TimerEvent: {}
+[3.791921] (-) TimerEvent: {}
+[3.895772] (-) TimerEvent: {}
+[3.998421] (-) TimerEvent: {}
+[4.002897] (pose_traj_controller) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[4.094472] (pose_traj_controller) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[4.100991] (-) TimerEvent: {}
+[4.204019] (-) TimerEvent: {}
+[4.306007] (-) TimerEvent: {}
+[4.409702] (-) TimerEvent: {}
+[4.515636] (-) TimerEvent: {}
+[4.528505] (pose_traj_controller) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[4.550091] (pose_traj_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.622553] (-) TimerEvent: {}
+[4.725566] (-) TimerEvent: {}
+[4.827346] (-) TimerEvent: {}
+[4.892384] (pose_traj_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.930224] (-) TimerEvent: {}
+[4.945461] (pose_traj_controller) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.949845] (pose_traj_controller) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.976598] (pose_traj_controller) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[5.031416] (-) TimerEvent: {}
+[5.134530] (-) TimerEvent: {}
+[5.238143] (-) TimerEvent: {}
+[5.311826] (pose_traj_controller) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[5.315279] (pose_traj_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.339473] (-) TimerEvent: {}
+[5.442288] (-) TimerEvent: {}
+[5.549968] (-) TimerEvent: {}
+[5.653369] (-) TimerEvent: {}
+[5.754389] (-) TimerEvent: {}
+[5.783318] (pose_traj_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.810741] (pose_traj_controller) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.812710] (pose_traj_controller) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.856089] (-) TimerEvent: {}
+[5.934895] (pose_traj_controller) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)\n'}
+[5.959514] (-) TimerEvent: {}
+[6.062531] (-) TimerEvent: {}
+[6.152530] (pose_traj_controller) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[6.153611] (pose_traj_controller) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.163949] (-) TimerEvent: {}
+[6.269060] (-) TimerEvent: {}
+[6.372422] (-) TimerEvent: {}
+[6.477475] (-) TimerEvent: {}
+[6.579857] (-) TimerEvent: {}
+[6.683451] (-) TimerEvent: {}
+[6.785997] (-) TimerEvent: {}
+[6.890521] (-) TimerEvent: {}
+[6.935742] (pose_traj_controller) StdoutLine: {'line': b'-- Found rclpy: 1.9.3 (/opt/ros/galactic/share/rclpy/cmake)\n'}
+[6.960200] (pose_traj_controller) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)\n'}
+[6.993757] (-) TimerEvent: {}
+[7.070029] (pose_traj_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[7.095733] (-) TimerEvent: {}
+[7.200039] (-) TimerEvent: {}
+[7.230196] (pose_traj_controller) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)\n'}
+[7.302765] (-) TimerEvent: {}
+[7.405950] (-) TimerEvent: {}
+[7.508846] (-) TimerEvent: {}
+[7.611046] (-) TimerEvent: {}
+[7.713866] (-) TimerEvent: {}
+[7.818244] (-) TimerEvent: {}
+[7.920446] (-) TimerEvent: {}
+[8.023058] (-) TimerEvent: {}
+[8.129891] (-) TimerEvent: {}
+[8.232991] (-) TimerEvent: {}
+[8.336107] (-) TimerEvent: {}
+[8.438612] (-) TimerEvent: {}
+[8.458656] (pose_traj_controller) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[8.541960] (-) TimerEvent: {}
+[8.601999] (pose_traj_controller) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/galactic/include  \n'}
+[8.643700] (-) TimerEvent: {}
+[8.747454] (-) TimerEvent: {}
+[8.849995] (-) TimerEvent: {}
+[8.951664] (-) TimerEvent: {}
+[9.053835] (-) TimerEvent: {}
+[9.159505] (-) TimerEvent: {}
+[9.187464] (pose_traj_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.262758] (-) TimerEvent: {}
+[9.366168] (-) TimerEvent: {}
+[9.458222] (pose_traj_controller) StdoutLine: {'line': b'-- Found geometry_msgs: 2.2.4 (/opt/ros/galactic/share/geometry_msgs/cmake)\n'}
+[9.467981] (-) TimerEvent: {}
+[9.571525] (-) TimerEvent: {}
+[9.676870] (-) TimerEvent: {}
+[9.782168] (-) TimerEvent: {}
+[9.886847] (-) TimerEvent: {}
+[9.990585] (-) TimerEvent: {}
+[10.093880] (-) TimerEvent: {}
+[10.196130] (-) TimerEvent: {}
+[10.290796] (pose_traj_controller) StdoutLine: {'line': b'-- Found action_msgs: 1.0.3 (/opt/ros/galactic/share/action_msgs/cmake)\n'}
+[10.300639] (-) TimerEvent: {}
+[10.418808] (-) TimerEvent: {}
+[10.520919] (-) TimerEvent: {}
+[10.622348] (-) TimerEvent: {}
+[10.726579] (-) TimerEvent: {}
+[10.830352] (-) TimerEvent: {}
+[10.843326] (pose_traj_controller) StdoutLine: {'line': b'-- Found nav_msgs: 2.2.4 (/opt/ros/galactic/share/nav_msgs/cmake)\n'}
+[10.935368] (-) TimerEvent: {}
+[11.089992] (-) TimerEvent: {}
+[11.201933] (-) TimerEvent: {}
+[11.307567] (-) TimerEvent: {}
+[11.411025] (-) TimerEvent: {}
+[11.517181] (-) TimerEvent: {}
+[11.558504] (pose_traj_controller) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[11.618816] (-) TimerEvent: {}
+[11.722110] (-) TimerEvent: {}
+[11.823549] (-) TimerEvent: {}
+[11.926667] (-) TimerEvent: {}
+[12.029625] (-) TimerEvent: {}
+[12.130986] (-) TimerEvent: {}
+[12.234863] (-) TimerEvent: {}
+[12.339461] (-) TimerEvent: {}
+[12.443549] (-) TimerEvent: {}
+[12.548874] (-) TimerEvent: {}
+[12.643188] (pose_traj_controller) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)\n'}
+[12.650793] (-) TimerEvent: {}
+[12.753888] (-) TimerEvent: {}
+[12.857432] (-) TimerEvent: {}
+[12.962461] (-) TimerEvent: {}
+[13.067179] (-) TimerEvent: {}
+[13.171794] (-) TimerEvent: {}
+[13.275652] (-) TimerEvent: {}
+[13.377602] (-) TimerEvent: {}
+[13.479603] (-) TimerEvent: {}
+[13.582907] (-) TimerEvent: {}
+[13.687728] (-) TimerEvent: {}
+[13.793646] (-) TimerEvent: {}
+[13.898253] (-) TimerEvent: {}
+[14.000753] (-) TimerEvent: {}
+[14.023340] (pose_traj_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[14.102700] (-) TimerEvent: {}
+[14.206497] (-) TimerEvent: {}
+[14.308590] (-) TimerEvent: {}
+[14.412497] (-) TimerEvent: {}
+[14.517204] (-) TimerEvent: {}
+[14.621398] (-) TimerEvent: {}
+[14.663501] (pose_traj_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[14.723695] (-) TimerEvent: {}
+[14.829417] (pose_traj_controller) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[14.830100] (-) TimerEvent: {}
+[14.846448] (pose_traj_controller) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)\n'}
+[14.933508] (-) TimerEvent: {}
+[15.027069] (pose_traj_controller) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[15.028180] (pose_traj_controller) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[15.029720] (pose_traj_controller) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[15.030158] (pose_traj_controller) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[15.035293] (-) TimerEvent: {}
+[15.137861] (-) TimerEvent: {}
+[15.143206] (pose_traj_controller) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[15.240783] (-) TimerEvent: {}
+[15.346524] (-) TimerEvent: {}
+[15.448085] (-) TimerEvent: {}
+[15.549945] (-) TimerEvent: {}
+[15.654113] (-) TimerEvent: {}
+[15.694668] (pose_traj_controller) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)\n'}
+[15.777586] (-) TimerEvent: {}
+[15.879989] (-) TimerEvent: {}
+[15.986175] (-) TimerEvent: {}
+[16.087596] (-) TimerEvent: {}
+[16.191490] (-) TimerEvent: {}
+[16.252006] (pose_traj_controller) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[16.294410] (-) TimerEvent: {}
+[16.295890] (pose_traj_controller) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[16.305703] (pose_traj_controller) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_generator_c>;/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_generator_c;/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_generator_cpp;/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_typesupport_fastrtps_c;/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_typesupport_fastrtps_cpp;$<BUILD_INTERFACE:/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_typesupport_c>;$<BUILD_INTERFACE:/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_generator_cpp>;/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_generator_py\n'}
+[16.306828] (pose_traj_controller) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[16.339218] (pose_traj_controller) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[16.339640] (pose_traj_controller) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[16.347844] (pose_traj_controller) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[16.364259] (pose_traj_controller) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[16.372571] (pose_traj_controller) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[16.396007] (-) TimerEvent: {}
+[16.406108] (pose_traj_controller) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[16.406739] (pose_traj_controller) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[16.415823] (pose_traj_controller) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[16.446676] (pose_traj_controller) StdoutLine: {'line': b'-- Configuring done\n'}
+[16.498917] (-) TimerEvent: {}
+[16.600473] (-) TimerEvent: {}
+[16.703119] (-) TimerEvent: {}
+[16.806562] (-) TimerEvent: {}
+[16.907617] (-) TimerEvent: {}
+[17.012182] (-) TimerEvent: {}
+[17.014252] (pose_traj_controller) StdoutLine: {'line': b'-- Generating done\n'}
+[17.030650] (pose_traj_controller) StdoutLine: {'line': b'-- Build files have been written to: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller\n'}
+[17.072689] (pose_traj_controller) CommandEnded: {'returncode': 0}
+[17.083531] (pose_traj_controller) JobProgress: {'identifier': 'pose_traj_controller', 'progress': 'build'}
+[17.084362] (pose_traj_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller', '--', '-j12', '-l12'], 'cwd': '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sid'), ('SSH_AGENT_PID', '1152'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sid/interbotix_ws/install/moveit_visual_tools/lib:/home/sid/interbotix_ws/install/interbotix_xs_rviz/lib:/home/sid/interbotix_ws/install/interbotix_xs_ros_control/lib:/home/sid/interbotix_ws/install/interbotix_xs_msgs/lib:/home/sid/interbotix_ws/install/interbotix_tf_tools/lib:/home/sid/interbotix_ws/install/interbotix_perception_msgs/lib:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/sid'), ('OLDPWD', '/home/sid/autonomy_ws/src/ME326-Group-8-new'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '809'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sid/interbotix_ws/install:/home/sid/autonomy_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sid'), ('JOURNAL_STREAM', '8:33477'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sid'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/sid/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sid-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1247,unix/sid-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1247'), ('INVOCATION_ID', '8ca18d04e58849bf8b5d21da1001e1e5'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/df498662_9e05_4791_827c_4dc169715d83'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('INTERBOTIX_XSLOCOBOT_BASE_TYPE', 'create3'), ('GNOME_TERMINAL_SERVICE', ':1.88'), ('INTERBOTIX_WS', '/home/sid/interbotix_ws'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sid/autonomy_ws/install/s2_basic:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_moveit_interface:/home/sid/interbotix_ws/install/moveit_visual_tools:/home/sid/interbotix_ws/install/interbotix_xslocobot_sim:/home/sid/interbotix_ws/install/interbotix_xslocobot_moveit:/home/sid/interbotix_ws/install/interbotix_xslocobot_descriptions:/home/sid/interbotix_ws/install/interbotix_xs_toolbox:/home/sid/interbotix_ws/install/interbotix_xs_rviz:/home/sid/interbotix_ws/install/interbotix_xs_ros_control:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_toolbox:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_perception_pipelines:/home/sid/interbotix_ws/install/interbotix_xs_msgs:/home/sid/interbotix_ws/install/interbotix_tf_tools:/home/sid/interbotix_ws/install/interbotix_perception_msgs:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs:/home/sid/interbotix_ws/install/interbotix_common_toolbox:/home/sid/interbotix_ws/install/interbotix_common_sim:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('ROS_DISCOVERY_SERVER', '192.169.0.11:11811'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sid/autonomy_ws/install/final_project/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_xs_modules/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_perception_modules/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_xs_msgs/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_perception_msgs/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_common_modules/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sid/autonomy_ws/install/s2_basic:/home/sid/interbotix_ws/install/interbotix_moveit_interface:/home/sid/interbotix_ws/install/moveit_visual_tools:/home/sid/interbotix_ws/install/interbotix_xslocobot_sim:/home/sid/interbotix_ws/install/interbotix_xslocobot_moveit:/home/sid/interbotix_ws/install/interbotix_xslocobot_descriptions:/home/sid/interbotix_ws/install/interbotix_xs_toolbox:/home/sid/interbotix_ws/install/interbotix_xs_rviz:/home/sid/interbotix_ws/install/interbotix_xs_ros_control:/home/sid/interbotix_ws/install/interbotix_perception_toolbox:/home/sid/interbotix_ws/install/interbotix_perception_pipelines:/home/sid/interbotix_ws/install/interbotix_xs_msgs:/home/sid/interbotix_ws/install/interbotix_tf_tools:/home/sid/interbotix_ws/install/interbotix_perception_msgs:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs:/home/sid/interbotix_ws/install/interbotix_common_toolbox:/home/sid/interbotix_ws/install/interbotix_common_sim:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic')]), 'shell': False}
+[17.115772] (-) TimerEvent: {}
+[17.221955] (-) TimerEvent: {}
+[17.266547] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ament_cmake_python_copy_pose_traj_controller\x1b[0m\n'}
+[17.325586] (-) TimerEvent: {}
+[17.354063] (pose_traj_controller) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_copy_pose_traj_controller\n'}
+[17.402330] (pose_traj_controller) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[17.426950] (-) TimerEvent: {}
+[17.530011] (-) TimerEvent: {}
+[17.634024] (-) TimerEvent: {}
+[17.736380] (-) TimerEvent: {}
+[17.842472] (-) TimerEvent: {}
+[17.944181] (-) TimerEvent: {}
+[18.045644] (-) TimerEvent: {}
+[18.149905] (-) TimerEvent: {}
+[18.254075] (-) TimerEvent: {}
+[18.358056] (-) TimerEvent: {}
+[18.461039] (-) TimerEvent: {}
+[18.565169] (-) TimerEvent: {}
+[18.667468] (-) TimerEvent: {}
+[18.770585] (-) TimerEvent: {}
+[18.872559] (-) TimerEvent: {}
+[18.976116] (-) TimerEvent: {}
+[19.081127] (-) TimerEvent: {}
+[19.182572] (-) TimerEvent: {}
+[19.285747] (-) TimerEvent: {}
+[19.295051] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__rosidl_generator_c\x1b[0m\n'}
+[19.387399] (-) TimerEvent: {}
+[19.446681] (pose_traj_controller) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/pose_traj_controller__rosidl_generator_c.dir/rosidl_generator_c/pose_traj_controller/action/detail/move_to_pose__functions.c.o\x1b[0m\n'}
+[19.489488] (-) TimerEvent: {}
+[19.591917] (-) TimerEvent: {}
+[19.695168] (-) TimerEvent: {}
+[19.798312] (-) TimerEvent: {}
+[19.901306] (-) TimerEvent: {}
+[20.003385] (-) TimerEvent: {}
+[20.039313] (pose_traj_controller) StdoutLine: {'line': b'[  9%] \x1b[32m\x1b[1mLinking C shared library libpose_traj_controller__rosidl_generator_c.so\x1b[0m\n'}
+[20.106134] (-) TimerEvent: {}
+[20.210461] (-) TimerEvent: {}
+[20.315171] (-) TimerEvent: {}
+[20.417681] (-) TimerEvent: {}
+[20.480117] (pose_traj_controller) StdoutLine: {'line': b'[  9%] Built target pose_traj_controller__rosidl_generator_c\n'}
+[20.520311] (-) TimerEvent: {}
+[20.538515] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ament_cmake_python_build_pose_traj_controller_egg\x1b[0m\n'}
+[20.622320] (-) TimerEvent: {}
+[20.725903] (-) TimerEvent: {}
+[20.828281] (-) TimerEvent: {}
+[20.932463] (-) TimerEvent: {}
+[21.034420] (-) TimerEvent: {}
+[21.136859] (-) TimerEvent: {}
+[21.239313] (-) TimerEvent: {}
+[21.342177] (-) TimerEvent: {}
+[21.445295] (-) TimerEvent: {}
+[21.522770] (pose_traj_controller) StdoutLine: {'line': b'running egg_info\n'}
+[21.525933] (pose_traj_controller) StdoutLine: {'line': b'creating pose_traj_controller.egg-info\n'}
+[21.526765] (pose_traj_controller) StdoutLine: {'line': b'writing pose_traj_controller.egg-info/PKG-INFO\n'}
+[21.527529] (pose_traj_controller) StdoutLine: {'line': b'writing dependency_links to pose_traj_controller.egg-info/dependency_links.txt\n'}
+[21.531550] (pose_traj_controller) StdoutLine: {'line': b'writing top-level names to pose_traj_controller.egg-info/top_level.txt\n'}
+[21.547277] (-) TimerEvent: {}
+[21.551989] (pose_traj_controller) StdoutLine: {'line': b"writing manifest file 'pose_traj_controller.egg-info/SOURCES.txt'\n"}
+[21.648725] (-) TimerEvent: {}
+[21.752100] (-) TimerEvent: {}
+[21.789841] (pose_traj_controller) StdoutLine: {'line': b"reading manifest file 'pose_traj_controller.egg-info/SOURCES.txt'\n"}
+[21.791300] (pose_traj_controller) StdoutLine: {'line': b"writing manifest file 'pose_traj_controller.egg-info/SOURCES.txt'\n"}
+[21.854522] (-) TimerEvent: {}
+[21.871952] (pose_traj_controller) StdoutLine: {'line': b'[  9%] Built target ament_cmake_python_build_pose_traj_controller_egg\n'}
+[21.924330] (pose_traj_controller) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[21.956124] (-) TimerEvent: {}
+[22.063706] (-) TimerEvent: {}
+[22.165715] (-) TimerEvent: {}
+[22.269957] (-) TimerEvent: {}
+[22.372567] (-) TimerEvent: {}
+[22.475440] (-) TimerEvent: {}
+[22.578119] (-) TimerEvent: {}
+[22.681554] (-) TimerEvent: {}
+[22.785571] (-) TimerEvent: {}
+[22.887609] (-) TimerEvent: {}
+[22.991096] (-) TimerEvent: {}
+[22.999509] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_c\x1b[0m\n'}
+[23.092266] (-) TimerEvent: {}
+[23.146404] (pose_traj_controller) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/pose_traj_controller__rosidl_typesupport_c.dir/rosidl_typesupport_c/pose_traj_controller/action/move_to_pose__type_support.cpp.o\x1b[0m\n'}
+[23.193559] (-) TimerEvent: {}
+[23.295624] (-) TimerEvent: {}
+[23.379569] (pose_traj_controller) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking CXX shared library libpose_traj_controller__rosidl_typesupport_c.so\x1b[0m\n'}
+[23.397481] (-) TimerEvent: {}
+[23.500387] (-) TimerEvent: {}
+[23.558717] (pose_traj_controller) StdoutLine: {'line': b'[ 19%] Built target pose_traj_controller__rosidl_typesupport_c\n'}
+[23.604288] (-) TimerEvent: {}
+[23.606369] (pose_traj_controller) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[23.709559] (-) TimerEvent: {}
+[23.813889] (-) TimerEvent: {}
+[23.915929] (-) TimerEvent: {}
+[24.017755] (-) TimerEvent: {}
+[24.120873] (-) TimerEvent: {}
+[24.225399] (-) TimerEvent: {}
+[24.329351] (-) TimerEvent: {}
+[24.431426] (-) TimerEvent: {}
+[24.534761] (-) TimerEvent: {}
+[24.636947] (-) TimerEvent: {}
+[24.739048] (-) TimerEvent: {}
+[24.842226] (-) TimerEvent: {}
+[24.939947] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[24.947090] (-) TimerEvent: {}
+[25.049885] (-) TimerEvent: {}
+[25.089212] (pose_traj_controller) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding C object CMakeFiles/pose_traj_controller__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pose_traj_controller/action/detail/move_to_pose__type_support.c.o\x1b[0m\n'}
+[25.152148] (-) TimerEvent: {}
+[25.255180] (-) TimerEvent: {}
+[25.275813] (pose_traj_controller) StdoutLine: {'line': b'[ 29%] \x1b[32m\x1b[1mLinking C shared library libpose_traj_controller__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[25.362971] (-) TimerEvent: {}
+[25.442356] (pose_traj_controller) StdoutLine: {'line': b'[ 29%] Built target pose_traj_controller__rosidl_typesupport_introspection_c\n'}
+[25.466174] (-) TimerEvent: {}
+[25.490564] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__cpp\x1b[0m\n'}
+[25.548602] (pose_traj_controller) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[25.570997] (-) TimerEvent: {}
+[25.673546] (-) TimerEvent: {}
+[25.778570] (-) TimerEvent: {}
+[25.881616] (-) TimerEvent: {}
+[25.984190] (-) TimerEvent: {}
+[26.085429] (-) TimerEvent: {}
+[26.187688] (-) TimerEvent: {}
+[26.288538] (-) TimerEvent: {}
+[26.391346] (-) TimerEvent: {}
+[26.494307] (-) TimerEvent: {}
+[26.596745] (-) TimerEvent: {}
+[26.700053] (-) TimerEvent: {}
+[26.802067] (-) TimerEvent: {}
+[26.905535] (-) TimerEvent: {}
+[27.007267] (-) TimerEvent: {}
+[27.109784] (-) TimerEvent: {}
+[27.215177] (-) TimerEvent: {}
+[27.322959] (-) TimerEvent: {}
+[27.450814] (-) TimerEvent: {}
+[27.494698] (pose_traj_controller) StdoutLine: {'line': b'[ 32%] Built target pose_traj_controller__cpp\n'}
+[27.553925] (-) TimerEvent: {}
+[27.657474] (-) TimerEvent: {}
+[27.663790] (pose_traj_controller) StdoutLine: {'line': b'[ 35%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[27.760184] (-) TimerEvent: {}
+[27.866319] (-) TimerEvent: {}
+[27.970219] (-) TimerEvent: {}
+[28.074331] (-) TimerEvent: {}
+[28.180662] (-) TimerEvent: {}
+[28.284632] (-) TimerEvent: {}
+[28.388246] (-) TimerEvent: {}
+[28.491650] (-) TimerEvent: {}
+[28.594006] (-) TimerEvent: {}
+[28.698049] (-) TimerEvent: {}
+[28.800714] (-) TimerEvent: {}
+[28.903886] (-) TimerEvent: {}
+[29.006786] (-) TimerEvent: {}
+[29.111182] (-) TimerEvent: {}
+[29.124024] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[29.215451] (-) TimerEvent: {}
+[29.318375] (pose_traj_controller) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/pose_traj_controller__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pose_traj_controller/action/detail/move_to_pose__type_support.cpp.o\x1b[0m\n'}
+[29.319350] (-) TimerEvent: {}
+[29.422878] (-) TimerEvent: {}
+[29.526123] (-) TimerEvent: {}
+[29.628215] (-) TimerEvent: {}
+[29.750476] (-) TimerEvent: {}
+[29.915106] (-) TimerEvent: {}
+[30.018585] (-) TimerEvent: {}
+[30.123154] (-) TimerEvent: {}
+[30.226200] (-) TimerEvent: {}
+[30.330057] (-) TimerEvent: {}
+[30.435843] (-) TimerEvent: {}
+[30.547903] (-) TimerEvent: {}
+[30.655860] (-) TimerEvent: {}
+[30.760679] (-) TimerEvent: {}
+[30.865813] (-) TimerEvent: {}
+[30.972855] (-) TimerEvent: {}
+[31.075375] (-) TimerEvent: {}
+[31.178709] (-) TimerEvent: {}
+[31.281614] (-) TimerEvent: {}
+[31.383525] (-) TimerEvent: {}
+[31.485812] (-) TimerEvent: {}
+[31.588750] (-) TimerEvent: {}
+[31.691016] (-) TimerEvent: {}
+[31.795923] (-) TimerEvent: {}
+[31.900290] (-) TimerEvent: {}
+[32.005428] (-) TimerEvent: {}
+[32.106527] (-) TimerEvent: {}
+[32.208543] (-) TimerEvent: {}
+[32.311602] (-) TimerEvent: {}
+[32.415784] (-) TimerEvent: {}
+[32.494441] (pose_traj_controller) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library libpose_traj_controller__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[32.517944] (-) TimerEvent: {}
+[32.623260] (-) TimerEvent: {}
+[32.726715] (-) TimerEvent: {}
+[32.830220] (pose_traj_controller) StdoutLine: {'line': b'[ 41%] Built target pose_traj_controller__rosidl_typesupport_introspection_cpp\n'}
+[32.830626] (-) TimerEvent: {}
+[32.877601] (pose_traj_controller) StdoutLine: {'line': b'[ 45%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[32.933395] (-) TimerEvent: {}
+[33.035954] (-) TimerEvent: {}
+[33.137426] (-) TimerEvent: {}
+[33.242050] (-) TimerEvent: {}
+[33.343592] (-) TimerEvent: {}
+[33.445958] (-) TimerEvent: {}
+[33.547657] (-) TimerEvent: {}
+[33.649991] (-) TimerEvent: {}
+[33.752939] (-) TimerEvent: {}
+[33.855153] (-) TimerEvent: {}
+[33.956968] (-) TimerEvent: {}
+[34.070737] (-) TimerEvent: {}
+[34.179575] (-) TimerEvent: {}
+[34.292885] (-) TimerEvent: {}
+[34.397789] (-) TimerEvent: {}
+[34.547111] (-) TimerEvent: {}
+[34.722363] (-) TimerEvent: {}
+[35.040670] (-) TimerEvent: {}
+[35.219447] (-) TimerEvent: {}
+[35.363188] (-) TimerEvent: {}
+[35.587450] (-) TimerEvent: {}
+[35.842406] (-) TimerEvent: {}
+[35.975111] (-) TimerEvent: {}
+[36.191490] (-) TimerEvent: {}
+[36.300790] (-) TimerEvent: {}
+[36.415503] (-) TimerEvent: {}
+[36.553303] (-) TimerEvent: {}
+[36.659945] (-) TimerEvent: {}
+[36.768459] (-) TimerEvent: {}
+[36.878552] (-) TimerEvent: {}
+[36.983497] (-) TimerEvent: {}
+[37.088226] (-) TimerEvent: {}
+[37.199511] (-) TimerEvent: {}
+[37.305519] (-) TimerEvent: {}
+[37.411564] (-) TimerEvent: {}
+[37.520104] (-) TimerEvent: {}
+[37.626496] (-) TimerEvent: {}
+[37.730472] (-) TimerEvent: {}
+[37.836463] (-) TimerEvent: {}
+[37.942644] (-) TimerEvent: {}
+[38.032650] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[38.048319] (-) TimerEvent: {}
+[38.149839] (-) TimerEvent: {}
+[38.255112] (-) TimerEvent: {}
+[38.362654] (-) TimerEvent: {}
+[38.466593] (-) TimerEvent: {}
+[38.594667] (-) TimerEvent: {}
+[38.603339] (pose_traj_controller) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/pose_traj_controller__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pose_traj_controller/action/detail/dds_fastrtps/move_to_pose__type_support.cpp.o\x1b[0m\n'}
+[38.697113] (-) TimerEvent: {}
+[38.801232] (-) TimerEvent: {}
+[38.904114] (-) TimerEvent: {}
+[39.008835] (-) TimerEvent: {}
+[39.121905] (-) TimerEvent: {}
+[39.225747] (-) TimerEvent: {}
+[39.330634] (-) TimerEvent: {}
+[39.432761] (-) TimerEvent: {}
+[39.541918] (-) TimerEvent: {}
+[39.653231] (-) TimerEvent: {}
+[39.756485] (-) TimerEvent: {}
+[39.863028] (-) TimerEvent: {}
+[39.969566] (-) TimerEvent: {}
+[40.072911] (-) TimerEvent: {}
+[40.178970] (-) TimerEvent: {}
+[40.285958] (-) TimerEvent: {}
+[40.390177] (-) TimerEvent: {}
+[40.495097] (-) TimerEvent: {}
+[40.598400] (-) TimerEvent: {}
+[40.702234] (-) TimerEvent: {}
+[40.810523] (-) TimerEvent: {}
+[40.918394] (-) TimerEvent: {}
+[41.022176] (-) TimerEvent: {}
+[41.126176] (-) TimerEvent: {}
+[41.239761] (-) TimerEvent: {}
+[41.359404] (-) TimerEvent: {}
+[41.462073] (-) TimerEvent: {}
+[41.571073] (-) TimerEvent: {}
+[41.673945] (-) TimerEvent: {}
+[41.779077] (-) TimerEvent: {}
+[41.881670] (-) TimerEvent: {}
+[41.985910] (-) TimerEvent: {}
+[42.089406] (-) TimerEvent: {}
+[42.194110] (-) TimerEvent: {}
+[42.302821] (-) TimerEvent: {}
+[42.406173] (-) TimerEvent: {}
+[42.512035] (-) TimerEvent: {}
+[42.618082] (-) TimerEvent: {}
+[42.723296] (-) TimerEvent: {}
+[42.828806] (-) TimerEvent: {}
+[42.937768] (-) TimerEvent: {}
+[43.042216] (-) TimerEvent: {}
+[43.149169] (-) TimerEvent: {}
+[43.256230] (-) TimerEvent: {}
+[43.367852] (-) TimerEvent: {}
+[43.473138] (-) TimerEvent: {}
+[43.491331] (pose_traj_controller) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libpose_traj_controller__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[43.578517] (-) TimerEvent: {}
+[43.680651] (-) TimerEvent: {}
+[43.785577] (-) TimerEvent: {}
+[43.890244] (-) TimerEvent: {}
+[43.996770] (-) TimerEvent: {}
+[44.100009] (-) TimerEvent: {}
+[44.203042] (-) TimerEvent: {}
+[44.305368] (-) TimerEvent: {}
+[44.307122] (pose_traj_controller) StdoutLine: {'line': b'[ 51%] Built target pose_traj_controller__rosidl_typesupport_fastrtps_cpp\n'}
+[44.377233] (pose_traj_controller) StdoutLine: {'line': b'[ 54%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[44.406436] (-) TimerEvent: {}
+[44.511187] (-) TimerEvent: {}
+[44.617776] (-) TimerEvent: {}
+[44.719723] (-) TimerEvent: {}
+[44.822640] (-) TimerEvent: {}
+[44.926958] (-) TimerEvent: {}
+[45.029347] (-) TimerEvent: {}
+[45.131427] (-) TimerEvent: {}
+[45.241645] (-) TimerEvent: {}
+[45.343763] (-) TimerEvent: {}
+[45.446690] (-) TimerEvent: {}
+[45.550338] (-) TimerEvent: {}
+[45.653710] (-) TimerEvent: {}
+[45.757030] (-) TimerEvent: {}
+[45.859312] (-) TimerEvent: {}
+[45.962891] (-) TimerEvent: {}
+[46.067448] (-) TimerEvent: {}
+[46.171901] (-) TimerEvent: {}
+[46.275069] (-) TimerEvent: {}
+[46.379165] (-) TimerEvent: {}
+[46.403149] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_cpp\x1b[0m\n'}
+[46.481822] (-) TimerEvent: {}
+[46.554242] (pose_traj_controller) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/pose_traj_controller__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pose_traj_controller/action/move_to_pose__type_support.cpp.o\x1b[0m\n'}
+[46.586449] (-) TimerEvent: {}
+[46.689339] (-) TimerEvent: {}
+[46.791834] (-) TimerEvent: {}
+[46.897784] (-) TimerEvent: {}
+[47.008798] (-) TimerEvent: {}
+[47.112021] (-) TimerEvent: {}
+[47.218591] (-) TimerEvent: {}
+[47.323935] (-) TimerEvent: {}
+[47.427956] (-) TimerEvent: {}
+[47.533791] (-) TimerEvent: {}
+[47.642271] (-) TimerEvent: {}
+[47.749513] (-) TimerEvent: {}
+[47.854002] (-) TimerEvent: {}
+[47.960684] (-) TimerEvent: {}
+[48.065324] (-) TimerEvent: {}
+[48.169835] (-) TimerEvent: {}
+[48.274302] (-) TimerEvent: {}
+[48.381104] (-) TimerEvent: {}
+[48.486719] (-) TimerEvent: {}
+[48.589930] (-) TimerEvent: {}
+[48.693301] (-) TimerEvent: {}
+[48.797930] (-) TimerEvent: {}
+[48.905191] (-) TimerEvent: {}
+[49.010622] (-) TimerEvent: {}
+[49.113728] (-) TimerEvent: {}
+[49.216872] (-) TimerEvent: {}
+[49.323655] (-) TimerEvent: {}
+[49.339128] (pose_traj_controller) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libpose_traj_controller__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[49.434129] (-) TimerEvent: {}
+[49.539170] (-) TimerEvent: {}
+[49.642700] (-) TimerEvent: {}
+[49.664745] (pose_traj_controller) StdoutLine: {'line': b'[ 61%] Built target pose_traj_controller__rosidl_typesupport_cpp\n'}
+[49.746104] (-) TimerEvent: {}
+[49.762323] (pose_traj_controller) StdoutLine: {'line': b'[ 64%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[49.850354] (-) TimerEvent: {}
+[49.954775] (-) TimerEvent: {}
+[50.062278] (-) TimerEvent: {}
+[50.165166] (-) TimerEvent: {}
+[50.269598] (-) TimerEvent: {}
+[50.376352] (-) TimerEvent: {}
+[50.480148] (-) TimerEvent: {}
+[50.581822] (-) TimerEvent: {}
+[50.684109] (-) TimerEvent: {}
+[50.788041] (-) TimerEvent: {}
+[50.890546] (-) TimerEvent: {}
+[50.994388] (-) TimerEvent: {}
+[51.096401] (-) TimerEvent: {}
+[51.198854] (-) TimerEvent: {}
+[51.302752] (-) TimerEvent: {}
+[51.405216] (-) TimerEvent: {}
+[51.508081] (-) TimerEvent: {}
+[51.615255] (-) TimerEvent: {}
+[51.690790] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[51.717387] (-) TimerEvent: {}
+[51.819579] (-) TimerEvent: {}
+[51.834779] (pose_traj_controller) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/pose_traj_controller__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pose_traj_controller/action/detail/move_to_pose__type_support_c.cpp.o\x1b[0m\n'}
+[51.922979] (-) TimerEvent: {}
+[52.025640] (-) TimerEvent: {}
+[52.127570] (-) TimerEvent: {}
+[52.230314] (-) TimerEvent: {}
+[52.334356] (-) TimerEvent: {}
+[52.438869] (-) TimerEvent: {}
+[52.543933] (-) TimerEvent: {}
+[52.646060] (-) TimerEvent: {}
+[52.750061] (-) TimerEvent: {}
+[52.853074] (-) TimerEvent: {}
+[52.958325] (-) TimerEvent: {}
+[53.062722] (-) TimerEvent: {}
+[53.167017] (-) TimerEvent: {}
+[53.270172] (-) TimerEvent: {}
+[53.329889] (pose_traj_controller) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libpose_traj_controller__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[53.372092] (-) TimerEvent: {}
+[53.475894] (-) TimerEvent: {}
+[53.579794] (-) TimerEvent: {}
+[53.683010] (-) TimerEvent: {}
+[53.700405] (pose_traj_controller) StdoutLine: {'line': b'[ 70%] Built target pose_traj_controller__rosidl_typesupport_fastrtps_c\n'}
+[53.750343] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller\x1b[0m\n'}
+[53.785285] (-) TimerEvent: {}
+[53.813801] (pose_traj_controller) StdoutLine: {'line': b'[ 70%] Built target pose_traj_controller\n'}
+[53.875334] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__py\x1b[0m\n'}
+[53.888889] (-) TimerEvent: {}
+[53.934265] (pose_traj_controller) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[53.991031] (-) TimerEvent: {}
+[54.093035] (-) TimerEvent: {}
+[54.194556] (-) TimerEvent: {}
+[54.298259] (-) TimerEvent: {}
+[54.400253] (-) TimerEvent: {}
+[54.501864] (-) TimerEvent: {}
+[54.603667] (-) TimerEvent: {}
+[55.213037] (-) TimerEvent: {}
+[55.368513] (-) TimerEvent: {}
+[55.496606] (-) TimerEvent: {}
+[55.605232] (-) TimerEvent: {}
+[55.738752] (-) TimerEvent: {}
+[55.843271] (-) TimerEvent: {}
+[55.947703] (-) TimerEvent: {}
+[56.050542] (-) TimerEvent: {}
+[56.155091] (-) TimerEvent: {}
+[56.266488] (-) TimerEvent: {}
+[56.370105] (-) TimerEvent: {}
+[56.473256] (-) TimerEvent: {}
+[56.576541] (-) TimerEvent: {}
+[56.681966] (-) TimerEvent: {}
+[56.784196] (-) TimerEvent: {}
+[56.887190] (-) TimerEvent: {}
+[56.991047] (-) TimerEvent: {}
+[57.096285] (-) TimerEvent: {}
+[57.202018] (-) TimerEvent: {}
+[57.304831] (-) TimerEvent: {}
+[57.409540] (-) TimerEvent: {}
+[57.518269] (-) TimerEvent: {}
+[57.622168] (-) TimerEvent: {}
+[57.727084] (-) TimerEvent: {}
+[57.828779] (-) TimerEvent: {}
+[57.933622] (-) TimerEvent: {}
+[58.035551] (-) TimerEvent: {}
+[58.138432] (-) TimerEvent: {}
+[58.243660] (-) TimerEvent: {}
+[58.346938] (-) TimerEvent: {}
+[58.451234] (-) TimerEvent: {}
+[58.554007] (-) TimerEvent: {}
+[58.656502] (-) TimerEvent: {}
+[58.759644] (-) TimerEvent: {}
+[58.863147] (-) TimerEvent: {}
+[58.967156] (-) TimerEvent: {}
+[59.070360] (-) TimerEvent: {}
+[59.174275] (-) TimerEvent: {}
+[59.278020] (-) TimerEvent: {}
+[59.296507] (pose_traj_controller) StdoutLine: {'line': b'[ 74%] Built target pose_traj_controller__py\n'}
+[59.350595] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__python\x1b[0m\n'}
+[59.380597] (-) TimerEvent: {}
+[59.485546] (-) TimerEvent: {}
+[59.589574] (-) TimerEvent: {}
+[59.693697] (-) TimerEvent: {}
+[59.798341] (-) TimerEvent: {}
+[59.866191] (pose_traj_controller) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/pose_traj_controller__python.dir/rosidl_generator_py/pose_traj_controller/action/_move_to_pose_s.c.o\x1b[0m\n'}
+[59.903172] (-) TimerEvent: {}
+[60.005559] (-) TimerEvent: {}
+[60.107817] (-) TimerEvent: {}
+[60.213034] (-) TimerEvent: {}
+[60.317903] (-) TimerEvent: {}
+[60.423233] (-) TimerEvent: {}
+[60.528057] (-) TimerEvent: {}
+[60.631141] (-) TimerEvent: {}
+[60.632013] (pose_traj_controller) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/pose_traj_controller/libpose_traj_controller__python.so\x1b[0m\n'}
+[60.732768] (-) TimerEvent: {}
+[60.835586] (-) TimerEvent: {}
+[60.871429] (pose_traj_controller) StdoutLine: {'line': b'[ 80%] Built target pose_traj_controller__python\n'}
+[60.923215] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[60.938153] (-) TimerEvent: {}
+[61.028647] (pose_traj_controller) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/pose_traj_controller__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/pose_traj_controller/_pose_traj_controller_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[61.040081] (-) TimerEvent: {}
+[61.144323] (-) TimerEvent: {}
+[61.246575] (-) TimerEvent: {}
+[61.350328] (-) TimerEvent: {}
+[61.437111] (pose_traj_controller) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[61.453254] (-) TimerEvent: {}
+[61.555146] (-) TimerEvent: {}
+[61.658560] (-) TimerEvent: {}
+[61.675600] (pose_traj_controller) StdoutLine: {'line': b'[ 87%] Built target pose_traj_controller__rosidl_typesupport_c__pyext\n'}
+[61.745768] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[61.761674] (-) TimerEvent: {}
+[61.865361] (-) TimerEvent: {}
+[61.875238] (pose_traj_controller) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/pose_traj_controller__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/pose_traj_controller/_pose_traj_controller_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[61.966932] (-) TimerEvent: {}
+[62.070830] (-) TimerEvent: {}
+[62.175634] (-) TimerEvent: {}
+[62.274583] (pose_traj_controller) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[62.275960] (-) TimerEvent: {}
+[62.379295] (-) TimerEvent: {}
+[62.486683] (-) TimerEvent: {}
+[62.576578] (pose_traj_controller) StdoutLine: {'line': b'[ 93%] Built target pose_traj_controller__rosidl_typesupport_fastrtps_c__pyext\n'}
+[62.590763] (-) TimerEvent: {}
+[62.631023] (pose_traj_controller) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[62.698799] (-) TimerEvent: {}
+[62.725917] (pose_traj_controller) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/pose_traj_controller__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/pose_traj_controller/_pose_traj_controller_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[62.801999] (-) TimerEvent: {}
+[62.905333] (-) TimerEvent: {}
+[63.009949] (-) TimerEvent: {}
+[63.113649] (-) TimerEvent: {}
+[63.149614] (pose_traj_controller) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[63.216046] (-) TimerEvent: {}
+[63.322312] (-) TimerEvent: {}
+[63.378246] (pose_traj_controller) StdoutLine: {'line': b'[100%] Built target pose_traj_controller__rosidl_typesupport_introspection_c__pyext\n'}
+[63.423127] (-) TimerEvent: {}
+[63.458679] (pose_traj_controller) CommandEnded: {'returncode': 0}
+[63.527626] (-) TimerEvent: {}
+[63.632937] (-) TimerEvent: {}
+[63.738571] (-) TimerEvent: {}
+[63.846120] (-) TimerEvent: {}
+[63.949194] (-) TimerEvent: {}
+[64.022974] (pose_traj_controller) JobProgress: {'identifier': 'pose_traj_controller', 'progress': 'install'}
+[64.096773] (pose_traj_controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller'], 'cwd': '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sid'), ('SSH_AGENT_PID', '1152'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sid/interbotix_ws/install/moveit_visual_tools/lib:/home/sid/interbotix_ws/install/interbotix_xs_rviz/lib:/home/sid/interbotix_ws/install/interbotix_xs_ros_control/lib:/home/sid/interbotix_ws/install/interbotix_xs_msgs/lib:/home/sid/interbotix_ws/install/interbotix_tf_tools/lib:/home/sid/interbotix_ws/install/interbotix_perception_msgs/lib:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/galactic/opt/yaml_cpp_vendor/lib:/opt/ros/galactic/opt/rviz_ogre_vendor/lib:/opt/ros/galactic/lib/x86_64-linux-gnu:/opt/ros/galactic/lib'), ('HOME', '/home/sid'), ('OLDPWD', '/home/sid/autonomy_ws/src/ME326-Group-8-new'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '809'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sid/interbotix_ws/install:/home/sid/autonomy_ws/install'), ('ROS_DISTRO', 'galactic'), ('LOGNAME', 'sid'), ('JOURNAL_STREAM', '8:33477'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sid'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/galactic/bin:/home/sid/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sid-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1247,unix/sid-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1247'), ('INVOCATION_ID', '8ca18d04e58849bf8b5d21da1001e1e5'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/df498662_9e05_4791_827c_4dc169715d83'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('INTERBOTIX_XSLOCOBOT_BASE_TYPE', 'create3'), ('GNOME_TERMINAL_SERVICE', ':1.88'), ('INTERBOTIX_WS', '/home/sid/interbotix_ws'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sid/autonomy_ws/install/s2_basic:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_moveit_interface:/home/sid/interbotix_ws/install/moveit_visual_tools:/home/sid/interbotix_ws/install/interbotix_xslocobot_sim:/home/sid/interbotix_ws/install/interbotix_xslocobot_moveit:/home/sid/interbotix_ws/install/interbotix_xslocobot_descriptions:/home/sid/interbotix_ws/install/interbotix_xs_toolbox:/home/sid/interbotix_ws/install/interbotix_xs_rviz:/home/sid/interbotix_ws/install/interbotix_xs_ros_control:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_toolbox:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_perception_pipelines:/home/sid/interbotix_ws/install/interbotix_xs_msgs:/home/sid/interbotix_ws/install/interbotix_tf_tools:/home/sid/interbotix_ws/install/interbotix_perception_msgs:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs:/home/sid/interbotix_ws/install/interbotix_common_toolbox:/home/sid/interbotix_ws/install/interbotix_common_sim:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic'), ('SHELL', '/bin/bash'), ('ROS_DISCOVERY_SERVER', '192.169.0.11:11811'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sid/autonomy_ws/install/final_project/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_xs_modules/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_perception_modules/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_xs_msgs/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_perception_msgs/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs/lib/python3.8/site-packages:/home/sid/interbotix_ws/install/interbotix_common_modules/lib/python3.8/site-packages:/opt/ros/galactic/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sid/autonomy_ws/install/s2_basic:/home/sid/interbotix_ws/install/interbotix_moveit_interface:/home/sid/interbotix_ws/install/moveit_visual_tools:/home/sid/interbotix_ws/install/interbotix_xslocobot_sim:/home/sid/interbotix_ws/install/interbotix_xslocobot_moveit:/home/sid/interbotix_ws/install/interbotix_xslocobot_descriptions:/home/sid/interbotix_ws/install/interbotix_xs_toolbox:/home/sid/interbotix_ws/install/interbotix_xs_rviz:/home/sid/interbotix_ws/install/interbotix_xs_ros_control:/home/sid/interbotix_ws/install/interbotix_perception_toolbox:/home/sid/interbotix_ws/install/interbotix_perception_pipelines:/home/sid/interbotix_ws/install/interbotix_xs_msgs:/home/sid/interbotix_ws/install/interbotix_tf_tools:/home/sid/interbotix_ws/install/interbotix_perception_msgs:/home/sid/interbotix_ws/install/interbotix_moveit_interface_msgs:/home/sid/interbotix_ws/install/interbotix_common_toolbox:/home/sid/interbotix_ws/install/interbotix_common_sim:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic')]), 'shell': False}
+[64.102222] (-) TimerEvent: {}
+[64.127977] (pose_traj_controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[64.130479] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/ament_index/resource_index/rosidl_interfaces/pose_traj_controller\n'}
+[64.133549] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller\n'}
+[64.135253] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action\n'}
+[64.135843] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail\n'}
+[64.137735] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__functions.c\n'}
+[64.138437] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__type_support.h\n'}
+[64.140217] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__functions.h\n'}
+[64.146838] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__struct.h\n'}
+[64.147377] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/move_to_pose.h\n'}
+[64.149468] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg\n'}
+[64.150133] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg/rosidl_generator_c__visibility_control.h\n'}
+[64.151230] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/library_path.sh\n'}
+[64.154261] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/library_path.dsv\n'}
+[64.155850] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_generator_c.so\n'}
+[64.159914] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_generator_c.so" to ""\n'}
+[64.161029] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller\n'}
+[64.161313] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action\n'}
+[64.163421] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail\n'}
+[64.163842] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[64.166356] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg\n'}
+[64.167036] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[64.167815] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_fastrtps_c.so\n'}
+[64.169457] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[64.172546] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller\n'}
+[64.175845] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action\n'}
+[64.176128] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail\n'}
+[64.182205] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[64.183102] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/dds_fastrtps\n'}
+[64.183411] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg\n'}
+[64.184070] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[64.186246] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_fastrtps_cpp.so\n'}
+[64.186555] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[64.186983] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller\n'}
+[64.188184] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action\n'}
+[64.188955] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail\n'}
+[64.189297] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__rosidl_typesupport_introspection_c.h\n'}
+[64.189588] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__type_support.c\n'}
+[64.191002] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg\n'}
+[64.191366] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[64.191692] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_introspection_c.so\n'}
+[64.192013] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_introspection_c.so" to ""\n'}
+[64.194570] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_c.so\n'}
+[64.196152] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_c.so" to ""\n'}
+[64.196561] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller\n'}
+[64.198644] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action\n'}
+[64.199094] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/move_to_pose.hpp\n'}
+[64.199898] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail\n'}
+[64.200737] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__struct.hpp\n'}
+[64.202433] (-) TimerEvent: {}
+[64.202669] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__builder.hpp\n'}
+[64.202935] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__traits.hpp\n'}
+[64.203194] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller\n'}
+[64.203877] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action\n'}
+[64.204595] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail\n'}
+[64.206300] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[64.206727] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__type_support.cpp\n'}
+[64.207438] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_introspection_cpp.so\n'}
+[64.207972] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[64.209789] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_cpp.so\n'}
+[64.211493] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_cpp.so" to ""\n'}
+[64.214893] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/pythonpath.sh\n'}
+[64.215878] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/pythonpath.dsv\n'}
+[64.216978] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/__init__.py\n'}
+[64.303749] (-) TimerEvent: {}
+[64.319266] (pose_traj_controller) StdoutLine: {'line': b"Compiling '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/__init__.py'...\n"}
+[64.346999] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action\n'}
+[64.347369] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action/__init__.py\n'}
+[64.347648] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action/_move_to_pose_s.c\n'}
+[64.347909] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action/_move_to_pose.py\n'}
+[64.348195] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[64.348455] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[64.349274] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[64.352929] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[64.353380] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[64.358237] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[64.358559] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__python.so\n'}
+[64.359001] (pose_traj_controller) StdoutLine: {'line': b'-- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__python.so" to ""\n'}
+[64.359774] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/action/MoveToPose.idl\n'}
+[64.366314] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/action/MoveToPose.action\n'}
+[64.366816] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages//pose_traj_controller.egg-info\n'}
+[64.367608] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages//pose_traj_controller.egg-info/SOURCES.txt\n'}
+[64.370355] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages//pose_traj_controller.egg-info/dependency_links.txt\n'}
+[64.370716] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages//pose_traj_controller.egg-info/top_level.txt\n'}
+[64.371253] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages//pose_traj_controller.egg-info/PKG-INFO\n'}
+[64.371704] (pose_traj_controller) StdoutLine: {'line': b'-- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller\n'}
+[64.372437] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/__init__.py\n'}
+[64.372722] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller\n'}
+[64.406962] (-) TimerEvent: {}
+[64.511281] (-) TimerEvent: {}
+[64.520273] (pose_traj_controller) StdoutLine: {'line': b"Listing '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller'...\n"}
+[64.527199] (pose_traj_controller) StdoutLine: {'line': b"Compiling '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/__init__.py'...\n"}
+[64.527906] (pose_traj_controller) StdoutLine: {'line': b"Listing '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action'...\n"}
+[64.528422] (pose_traj_controller) StdoutLine: {'line': b"Compiling '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action/__init__.py'...\n"}
+[64.530740] (pose_traj_controller) StdoutLine: {'line': b"Compiling '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action/_move_to_pose.py'...\n"}
+[64.534068] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/pose_traj_controller/pose_traj_controller\n'}
+[64.543261] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/ament_index/resource_index/package_run_dependencies/pose_traj_controller\n'}
+[64.543800] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/ament_index/resource_index/parent_prefix_path/pose_traj_controller\n'}
+[64.544197] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/ament_prefix_path.sh\n'}
+[64.550971] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/ament_prefix_path.dsv\n'}
+[64.553416] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/path.sh\n'}
+[64.554593] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/path.dsv\n'}
+[64.555005] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/local_setup.bash\n'}
+[64.555516] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/local_setup.sh\n'}
+[64.556149] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/local_setup.zsh\n'}
+[64.556522] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/local_setup.dsv\n'}
+[64.558713] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.dsv\n'}
+[64.559512] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/ament_index/resource_index/packages/pose_traj_controller\n'}
+[64.560677] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_generator_cExport.cmake\n'}
+[64.562333] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_generator_cExport-noconfig.cmake\n'}
+[64.562894] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_introspection_cExport.cmake\n'}
+[64.563501] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[64.564312] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_cExport.cmake\n'}
+[64.567777] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[64.568122] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_generator_cppExport.cmake\n'}
+[64.570015] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[64.571269] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[64.572191] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_cppExport.cmake\n'}
+[64.574565] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[64.575229] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/rosidl_cmake-extras.cmake\n'}
+[64.576080] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[64.577091] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[64.578796] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[64.579343] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[64.580918] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[64.581924] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[64.582859] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controllerConfig.cmake\n'}
+[64.583479] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controllerConfig-version.cmake\n'}
+[64.583813] (pose_traj_controller) StdoutLine: {'line': b'-- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.xml\n'}
+[64.594889] (pose_traj_controller) CommandEnded: {'returncode': 0}
+[64.617475] (-) TimerEvent: {}
+[64.758791] (-) TimerEvent: {}
+[64.875902] (-) TimerEvent: {}
+[64.992819] (-) TimerEvent: {}
+[65.130945] (-) TimerEvent: {}
+[65.234082] (-) TimerEvent: {}
+[65.338908] (-) TimerEvent: {}
+[65.452652] (-) TimerEvent: {}
+[65.594916] (-) TimerEvent: {}
+[65.698726] (-) TimerEvent: {}
+[65.803623] (-) TimerEvent: {}
+[65.906568] (-) TimerEvent: {}
+[66.015215] (-) TimerEvent: {}
+[66.122756] (-) TimerEvent: {}
+[66.228116] (-) TimerEvent: {}
+[66.330848] (-) TimerEvent: {}
+[66.484546] (-) TimerEvent: {}
+[66.596630] (-) TimerEvent: {}
+[66.708350] (-) TimerEvent: {}
+[66.858353] (-) TimerEvent: {}
+[66.999910] (-) TimerEvent: {}
+[67.121091] (-) TimerEvent: {}
+[67.239434] (-) TimerEvent: {}
+[67.345691] (-) TimerEvent: {}
+[67.481185] (-) TimerEvent: {}
+[67.651724] (-) TimerEvent: {}
+[67.698772] (pose_traj_controller) JobEnded: {'identifier': 'pose_traj_controller', 'rc': 0}
+[67.702227] (-) EventReactorShutdown: {}

@@ -1,0 +1,272 @@
+#!/usr/bin/env python3
+
+import time
+import rclpy
+from rclpy.action import ActionServer, CancelResponse, GoalResponse
+from rclpy.node import Node
+from rclpy.qos import qos_profile_sensor_data
+from geometry_msgs.msg import Twist, Point
+from nav_msgs.msg import Odometry
+from rclpy.executors import MultiThreadedExecutor
+from rclpy.callback_groups import ReentrantCallbackGroup
+import numpy as np
+
+from tf_transformations import euler_from_quaternion
+
+from pose_traj_controller.action import MoveToPose
+
+VEL_CMD_MSG = '/locobot/diffdrive_controller/cmd_vel_unstamped'
+# POSE_MSG = '/odom'
+POSE_MSG = '/locobot/sim_ground_truth_pose'
+POSE_MSG_TYPE = Odometry
+
+class MoveToPoseActionServer(Node):
+
+    def __init__(self):
+        super().__init__('move_to_pose_action_server')
+        
+        self.mobile_base_vel_publisher = self.create_publisher(Twist, VEL_CMD_MSG, 5)
+        self.subscription_odom = self.create_subscription(
+            POSE_MSG_TYPE,
+            POSE_MSG,
+            self.odom_callback,
+            qos_profile_sensor_data
+        )
+        
+        self._current_goal_handle = None
+        self.current_pose = None
+        self.target_position = None
+        self.target_yaw = None
+        self.orientation_required = False    
+        self.pos_reached = False
+        self.angle_reached = False
+        
+        # Control parameters
+        self.L = 0.1
+        self.goal_reached_error = 0.08
+        self._cumm_err_2d = np.matrix([[0.0], [0.0]])
+        self._cumm_err_angle = 0.0
+        self.control_gain = 0.5
+        self.angle_gain = 1.0
+        self.Ki_2d_thres = 0.5
+        self.Ki_ang_thres = 0.7
+        self.Ki_2d = 0.07
+        self.Ki_ang = 0.4
+        
+        self._action_server = ActionServer(
+            self,
+            MoveToPose,
+            'move_to_pose',
+            execute_callback=self.execute_callback,
+            goal_callback=self.goal_callback,
+            handle_accepted_callback=self.handle_accepted_callback,
+            cancel_callback=self.cancel_callback,
+            callback_group=ReentrantCallbackGroup()
+        )
+
+    def destroy(self):
+        self._action_server.destroy()
+        super().destroy_node()
+
+    def odom_callback(self, data):
+        self.current_pose = data.pose.pose
+    
+    def reset_params(self):
+        self.pos_reached = False
+        self.angle_reached = False
+        self._cumm_err_2d = np.matrix([[0.0], [0.0]])
+        self._cumm_err_angle = 0.0
+                
+    def goal_callback(self, goal_request):
+        # This method decides whether to accept or reject a new goal
+        self.get_logger().info('Received new goal request...')
+        return GoalResponse.ACCEPT
+
+    def handle_accepted_callback(self, goal_handle):
+        self.get_logger().info('Handle accepted...')
+        
+        # with self._goal_lock:
+        # This server only allows one goal at a time
+        if self._current_goal_handle is not None and self._current_goal_handle.is_active:
+            self.get_logger().info('Aborting previous goal...')
+            # Abort the existing goal
+            self._current_goal_handle.abort()
+        self._current_goal_handle = goal_handle
+
+        goal_handle.execute()
+        
+    def cancel_callback(self, goal_handle):
+        self.get_logger().info('Received cancel request...')
+        self.reset_params()
+        return CancelResponse.ACCEPT
+
+    def execute_callback(self, goal_handle):
+        self.get_logger().info('Executing goal...')
+        result = MoveToPose.Result()
+            
+        # Initialize and start your goal execution logic here, for example:
+        self.init_movement(goal_handle.request.position, goal_handle.request.yaw, goal_handle.request.orientation_required)
+        
+        while not self.pos_reached or not self.angle_reached:
+            # If goal is flagged as no longer active (ie. another goal was accepted),
+            # then stop executing
+            if not goal_handle.is_active:
+                self.get_logger().info('Goal aborted')
+                result.pose_reached = False
+                self.reset_params()
+                return result
+
+            if goal_handle.is_cancel_requested:
+                goal_handle.canceled()
+                self.get_logger().info('Goal canceled')
+                result.pose_reached = False
+                self.reset_params()
+                return result
+            
+            if self.current_pose is None:
+                self.get_logger().info('Waiting for odometry...')
+                time.sleep(0.1)
+            else:
+                try: 
+                    success = self.movement_logic()
+                    time.sleep(0.1)
+                
+                except Exception as e:
+                    self.get_logger().error(f'Error during movement: {str(e)}')
+                    break
+                
+        if self.pos_reached and self.angle_reached:
+            self.get_logger().info('Goal reached!')
+            goal_handle.succeed()
+            result.pose_reached = True
+        else:
+            self.get_logger().info('Goal not reached yet.')
+            goal_handle.abort()
+            result.pose_reached = False
+        
+        self.get_logger().info('End of execute callback.')
+        self.reset_params()
+        self.stop_robot()
+        return result
+
+    def init_movement(self, target_position, target_yaw, orientation_required):
+        # Initialize the robot's movement towards the goal
+        self.get_logger().info('Initializing movement...')
+        self.target_position = target_position
+        self.target_yaw = target_yaw
+        self.orientation_required = orientation_required
+        self.pos_reached = False
+        self.angle_reached = False
+        self._cumm_err_2d = np.matrix([[0.0], [0.0]])
+        self._cumm_err_angle = 0.0
+
+    def movement_logic(self):
+        if self.pos_reached and self.angle_reached:
+            return True
+        else:
+            # self.get_logger().info('Processing velocity command...')
+            self.publish_vel_cmd()
+            return False
+            
+        # Check if some condition indicates that the goal cannot be achieved
+        # if self.goal_unachievable():  # Implement this method based on your logic
+            # raise Exception("Goal unachievable due to some conditions.")
+                
+        
+
+    def stop_robot(self):
+        # Stop the robot, e.g., by publishing a zero velocity command
+        # Publish zero velocity to stop the robot
+        self.get_logger().info('Stopping the robot')
+        control_msg = Twist()
+        control_msg.linear.x = 0.0
+        control_msg.angular.z = 0.0
+        self.mobile_base_vel_publisher.publish(control_msg)
+    
+        
+    def publish_vel_cmd(self):
+        control_msg = Twist()
+        
+        qw = self.current_pose.orientation.w
+        qx = self.current_pose.orientation.x
+        qy = self.current_pose.orientation.y
+        qz = self.current_pose.orientation.z
+        R11 = qw**2 + qx**2 - qy**2 -qz**2
+        R12 = 2*qx*qy - 2*qw*qz
+        R21 = 2*qx*qy + 2*qw*qz
+        R22 = qw**2 - qx**2 + qy**2 -qz**2
+        
+        point_P = Point()
+        point_P.x = self.current_pose.position.x + self.L*R11
+        point_P.y = self.current_pose.position.y + self.L*R21
+        point_P.z = 0.1
+        
+        err_x = self.target_position.x - point_P.x
+        err_y = self.target_position.y - point_P.y
+        error_vect = np.matrix([[err_x], [err_y]])
+
+        Kp_mat = self.control_gain * np.eye(2)
+        Ki_mat = self.Ki_2d * np.eye(2)
+        Kp_ang = self.angle_gain 
+        ki_ang = self.Ki_ang
+
+        euler = euler_from_quaternion([qx, qy, qz, qw])
+        current_yaw = euler[2]
+        
+        angle_error = self.target_yaw - current_yaw
+        angle_error = (angle_error + np.pi) % (2 * np.pi) - np.pi
+        
+        err_mag = np.linalg.norm(error_vect)
+        
+        if err_mag < self.goal_reached_error:
+            self.pos_reached = True
+            self._cumm_err_2d = np.matrix([[0.0], [0.0]])
+            control_msg.linear.x = 0.0
+            
+        if self.pos_reached:
+            if not self.orientation_required or abs(angle_error) <= 0.05:
+                self.angle_reached = True
+                control_msg.angular.z = 0.0
+                self._cumm_err_angle = 0.0
+            else:
+                if angle_error < self.Ki_ang_thres:
+                    self._cumm_err_angle = self._cumm_err_angle + angle_error
+                    
+                control_msg.angular.z = Kp_ang * angle_error + ki_ang * self._cumm_err_angle
+                
+                self.mobile_base_vel_publisher.publish(control_msg)
+        
+            self.mobile_base_vel_publisher.publish(control_msg)
+        
+        else:
+            if err_mag < self.Ki_2d_thres:
+                self._cumm_err_2d = self._cumm_err_2d + error_vect
+            
+            self.pos_reached = False
+            point_p_error_signal = Kp_mat @ error_vect + Ki_mat @ self._cumm_err_2d
+            non_holonomic_mat = np.matrix([
+                [np.cos(current_yaw), -self.L*np.sin(current_yaw)],
+                [np.sin(current_yaw), self.L*np.cos(current_yaw)]
+            ])
+            control_input = np.linalg.inv(non_holonomic_mat) @ point_p_error_signal
+            control_msg.linear.x = float(control_input.item(0))
+            control_msg.angular.z = float(control_input.item(1))
+            self.mobile_base_vel_publisher.publish(control_msg)
+        
+        # Log control_msg
+        self.get_logger().info('Control msg: %s' % control_msg)
+
+def main(args=None):
+    rclpy.init(args=args)
+    move_to_pose_action_server = MoveToPoseActionServer()
+    
+    executor = MultiThreadedExecutor()
+    rclpy.spin(move_to_pose_action_server, executor=executor)
+    # rclpy.spin(move_to_pose_action_server)
+    
+    move_to_pose_action_server.destroy()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
+    

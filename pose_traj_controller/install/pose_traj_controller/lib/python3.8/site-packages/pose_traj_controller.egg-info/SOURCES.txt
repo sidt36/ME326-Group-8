@@ -1,0 +1,6 @@
+setup.py
+pose_traj_controller/__init__.py
+pose_traj_controller.egg-info/PKG-INFO
+pose_traj_controller.egg-info/SOURCES.txt
+pose_traj_controller.egg-info/dependency_links.txt
+pose_traj_controller.egg-info/top_level.txt

@@ -1,0 +1,256 @@
+[1.041s] Invoking command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller -DCMAKE_INSTALL_PREFIX=/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller
+[2.896s] -- The C compiler identification is GNU 9.4.0
+[3.992s] -- The CXX compiler identification is GNU 9.4.0
+[4.084s] -- Check for working C compiler: /usr/bin/cc
+[4.518s] -- Check for working C compiler: /usr/bin/cc -- works
+[4.540s] -- Detecting C compiler ABI info
+[4.882s] -- Detecting C compiler ABI info - done
+[4.935s] -- Detecting C compile features
+[4.939s] -- Detecting C compile features - done
+[4.966s] -- Check for working CXX compiler: /usr/bin/c++
+[5.301s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[5.305s] -- Detecting CXX compiler ABI info
+[5.774s] -- Detecting CXX compiler ABI info - done
+[5.800s] -- Detecting CXX compile features
+[5.803s] -- Detecting CXX compile features - done
+[5.925s] -- Found ament_cmake: 1.1.6 (/opt/ros/galactic/share/ament_cmake/cmake)
+[6.142s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[6.143s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[6.925s] -- Found rclpy: 1.9.3 (/opt/ros/galactic/share/rclpy/cmake)
+[6.951s] -- Found rosidl_default_generators: 1.1.1 (/opt/ros/galactic/share/rosidl_default_generators/cmake)
+[7.060s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[7.220s] -- Found rosidl_adapter: 2.2.3 (/opt/ros/galactic/share/rosidl_adapter/cmake)
+[8.448s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[8.592s] -- Found FastRTPS: /opt/ros/galactic/include  
+[9.177s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[9.448s] -- Found geometry_msgs: 2.2.4 (/opt/ros/galactic/share/geometry_msgs/cmake)
+[10.281s] -- Found action_msgs: 1.0.3 (/opt/ros/galactic/share/action_msgs/cmake)
+[10.833s] -- Found nav_msgs: 2.2.4 (/opt/ros/galactic/share/nav_msgs/cmake)
+[11.549s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[12.633s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/galactic/share/ament_cmake_ros/cmake)
+[14.013s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[14.655s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[14.819s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[14.836s] -- Found python_cmake_module: 0.8.1 (/opt/ros/galactic/share/python_cmake_module/cmake)
+[15.017s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[15.018s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[15.019s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[15.020s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[15.133s] -- Found PythonExtra: .so  
+[15.684s] -- Found ament_lint_auto: 0.10.7 (/opt/ros/galactic/share/ament_lint_auto/cmake)
+[16.241s] -- Added test 'copyright' to check source files copyright and LICENSE
+[16.285s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[16.296s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_generator_c>;/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_generator_c;/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_generator_cpp;/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_typesupport_fastrtps_c;/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_typesupport_fastrtps_cpp;$<BUILD_INTERFACE:/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_typesupport_c>;$<BUILD_INTERFACE:/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_generator_cpp>;/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller/rosidl_generator_py
+[16.297s] -- Configured cppcheck exclude dirs and/or files: 
+[16.329s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[16.329s] -- Configured cpplint exclude dirs and/or files: 
+[16.337s] -- Added test 'flake8' to check Python code syntax and style conventions
+[16.355s] -- Added test 'lint_cmake' to check CMake code style
+[16.363s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[16.396s] -- Added test 'uncrustify' to check C / C++ code style
+[16.396s] -- Configured uncrustify additional arguments: 
+[16.405s] -- Added test 'xmllint' to check XML markup files
+[16.436s] -- Configuring done
+[17.004s] -- Generating done
+[17.020s] -- Build files have been written to: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller
+[17.069s] Invoked command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller -DCMAKE_INSTALL_PREFIX=/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller
+[17.076s] Invoking command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake --build /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller -- -j12 -l12
+[17.256s] [35m[1mScanning dependencies of target ament_cmake_python_copy_pose_traj_controller[0m
+[17.344s] [  0%] Built target ament_cmake_python_copy_pose_traj_controller
+[17.392s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[19.285s] [35m[1mScanning dependencies of target pose_traj_controller__rosidl_generator_c[0m
+[19.436s] [  6%] [32mBuilding C object CMakeFiles/pose_traj_controller__rosidl_generator_c.dir/rosidl_generator_c/pose_traj_controller/action/detail/move_to_pose__functions.c.o[0m
+[20.029s] [  9%] [32m[1mLinking C shared library libpose_traj_controller__rosidl_generator_c.so[0m
+[20.471s] [  9%] Built target pose_traj_controller__rosidl_generator_c
+[20.528s] [35m[1mScanning dependencies of target ament_cmake_python_build_pose_traj_controller_egg[0m
+[21.512s] running egg_info
+[21.515s] creating pose_traj_controller.egg-info
+[21.516s] writing pose_traj_controller.egg-info/PKG-INFO
+[21.517s] writing dependency_links to pose_traj_controller.egg-info/dependency_links.txt
+[21.521s] writing top-level names to pose_traj_controller.egg-info/top_level.txt
+[21.542s] writing manifest file 'pose_traj_controller.egg-info/SOURCES.txt'
+[21.780s] reading manifest file 'pose_traj_controller.egg-info/SOURCES.txt'
+[21.781s] writing manifest file 'pose_traj_controller.egg-info/SOURCES.txt'
+[21.862s] [  9%] Built target ament_cmake_python_build_pose_traj_controller_egg
+[21.914s] [ 12%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[22.989s] [35m[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_c[0m
+[23.136s] [ 16%] [32mBuilding CXX object CMakeFiles/pose_traj_controller__rosidl_typesupport_c.dir/rosidl_typesupport_c/pose_traj_controller/action/move_to_pose__type_support.cpp.o[0m
+[23.369s] [ 19%] [32m[1mLinking CXX shared library libpose_traj_controller__rosidl_typesupport_c.so[0m
+[23.548s] [ 19%] Built target pose_traj_controller__rosidl_typesupport_c
+[23.596s] [ 22%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[24.929s] [35m[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_introspection_c[0m
+[25.079s] [ 25%] [32mBuilding C object CMakeFiles/pose_traj_controller__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pose_traj_controller/action/detail/move_to_pose__type_support.c.o[0m
+[25.266s] [ 29%] [32m[1mLinking C shared library libpose_traj_controller__rosidl_typesupport_introspection_c.so[0m
+[25.432s] [ 29%] Built target pose_traj_controller__rosidl_typesupport_introspection_c
+[25.480s] [35m[1mScanning dependencies of target pose_traj_controller__cpp[0m
+[25.539s] [ 32%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[27.484s] [ 32%] Built target pose_traj_controller__cpp
+[27.654s] [ 35%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[29.114s] [35m[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_introspection_cpp[0m
+[29.308s] [ 38%] [32mBuilding CXX object CMakeFiles/pose_traj_controller__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pose_traj_controller/action/detail/move_to_pose__type_support.cpp.o[0m
+[32.484s] [ 41%] [32m[1mLinking CXX shared library libpose_traj_controller__rosidl_typesupport_introspection_cpp.so[0m
+[32.820s] [ 41%] Built target pose_traj_controller__rosidl_typesupport_introspection_cpp
+[32.867s] [ 45%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[38.026s] [35m[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_fastrtps_cpp[0m
+[38.593s] [ 48%] [32mBuilding CXX object CMakeFiles/pose_traj_controller__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pose_traj_controller/action/detail/dds_fastrtps/move_to_pose__type_support.cpp.o[0m
+[43.481s] [ 51%] [32m[1mLinking CXX shared library libpose_traj_controller__rosidl_typesupport_fastrtps_cpp.so[0m
+[44.297s] [ 51%] Built target pose_traj_controller__rosidl_typesupport_fastrtps_cpp
+[44.395s] [ 54%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[46.393s] [35m[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_cpp[0m
+[46.544s] [ 58%] [32mBuilding CXX object CMakeFiles/pose_traj_controller__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pose_traj_controller/action/move_to_pose__type_support.cpp.o[0m
+[49.329s] [ 61%] [32m[1mLinking CXX shared library libpose_traj_controller__rosidl_typesupport_cpp.so[0m
+[49.655s] [ 61%] Built target pose_traj_controller__rosidl_typesupport_cpp
+[49.752s] [ 64%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[51.681s] [35m[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_fastrtps_c[0m
+[51.824s] [ 67%] [32mBuilding CXX object CMakeFiles/pose_traj_controller__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pose_traj_controller/action/detail/move_to_pose__type_support_c.cpp.o[0m
+[53.319s] [ 70%] [32m[1mLinking CXX shared library libpose_traj_controller__rosidl_typesupport_fastrtps_c.so[0m
+[53.690s] [ 70%] Built target pose_traj_controller__rosidl_typesupport_fastrtps_c
+[53.740s] [35m[1mScanning dependencies of target pose_traj_controller[0m
+[53.803s] [ 70%] Built target pose_traj_controller
+[53.865s] [35m[1mScanning dependencies of target pose_traj_controller__py[0m
+[53.924s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[59.286s] [ 74%] Built target pose_traj_controller__py
+[59.340s] [35m[1mScanning dependencies of target pose_traj_controller__python[0m
+[59.856s] [ 77%] [32mBuilding C object CMakeFiles/pose_traj_controller__python.dir/rosidl_generator_py/pose_traj_controller/action/_move_to_pose_s.c.o[0m
+[60.622s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/pose_traj_controller/libpose_traj_controller__python.so[0m
+[60.861s] [ 80%] Built target pose_traj_controller__python
+[60.913s] [35m[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_c__pyext[0m
+[61.018s] [ 83%] [32mBuilding C object CMakeFiles/pose_traj_controller__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/pose_traj_controller/_pose_traj_controller_s.ep.rosidl_typesupport_c.c.o[0m
+[61.427s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[61.665s] [ 87%] Built target pose_traj_controller__rosidl_typesupport_c__pyext
+[61.735s] [35m[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_fastrtps_c__pyext[0m
+[61.865s] [ 90%] [32mBuilding C object CMakeFiles/pose_traj_controller__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/pose_traj_controller/_pose_traj_controller_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[62.264s] [ 93%] [32m[1mLinking CXX shared library rosidl_generator_py/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[62.567s] [ 93%] Built target pose_traj_controller__rosidl_typesupport_fastrtps_c__pyext
+[62.620s] [35m[1mScanning dependencies of target pose_traj_controller__rosidl_typesupport_introspection_c__pyext[0m
+[62.715s] [ 96%] [32mBuilding C object CMakeFiles/pose_traj_controller__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/pose_traj_controller/_pose_traj_controller_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[63.139s] [100%] [32m[1mLinking C shared library rosidl_generator_py/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[63.369s] [100%] Built target pose_traj_controller__rosidl_typesupport_introspection_c__pyext
+[63.449s] Invoked command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake --build /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller -- -j12 -l12
+[64.089s] Invoking command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake --install /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller
+[64.118s] -- Install configuration: ""
+[64.120s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/ament_index/resource_index/rosidl_interfaces/pose_traj_controller
+[64.124s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller
+[64.125s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action
+[64.125s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail
+[64.127s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__functions.c
+[64.129s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__type_support.h
+[64.130s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__functions.h
+[64.136s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__struct.h
+[64.137s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/move_to_pose.h
+[64.139s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg
+[64.140s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg/rosidl_generator_c__visibility_control.h
+[64.142s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/library_path.sh
+[64.144s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/library_path.dsv
+[64.145s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_generator_c.so
+[64.150s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_generator_c.so" to ""
+[64.150s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller
+[64.151s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action
+[64.153s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail
+[64.154s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__rosidl_typesupport_fastrtps_c.h
+[64.156s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg
+[64.156s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[64.158s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_fastrtps_c.so
+[64.161s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_fastrtps_c.so" to ""
+[64.164s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller
+[64.165s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action
+[64.167s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail
+[64.172s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[64.173s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/dds_fastrtps
+[64.173s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg
+[64.174s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[64.176s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_fastrtps_cpp.so
+[64.176s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_fastrtps_cpp.so" to ""
+[64.177s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller
+[64.178s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action
+[64.178s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail
+[64.179s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__rosidl_typesupport_introspection_c.h
+[64.180s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__type_support.c
+[64.180s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg
+[64.181s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[64.181s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_introspection_c.so
+[64.183s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_introspection_c.so" to ""
+[64.185s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_c.so
+[64.186s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_c.so" to ""
+[64.187s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller
+[64.188s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action
+[64.189s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/move_to_pose.hpp
+[64.189s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail
+[64.192s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__struct.hpp
+[64.192s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__builder.hpp
+[64.192s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__traits.hpp
+[64.193s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller
+[64.194s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action
+[64.194s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail
+[64.196s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__rosidl_typesupport_introspection_cpp.hpp
+[64.196s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/include/pose_traj_controller/action/detail/move_to_pose__type_support.cpp
+[64.197s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_introspection_cpp.so
+[64.197s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_introspection_cpp.so" to ""
+[64.199s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_cpp.so
+[64.201s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__rosidl_typesupport_cpp.so" to ""
+[64.205s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/pythonpath.sh
+[64.206s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/pythonpath.dsv
+[64.207s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/__init__.py
+[64.309s] Compiling '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/__init__.py'...
+[64.336s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action
+[64.337s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action/__init__.py
+[64.337s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action/_move_to_pose_s.c
+[64.337s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action/_move_to_pose.py
+[64.338s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[64.338s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[64.339s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[64.342s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[64.343s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[64.348s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[64.348s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__python.so
+[64.349s] -- Set runtime path of "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/libpose_traj_controller__python.so" to ""
+[64.349s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/action/MoveToPose.idl
+[64.356s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/action/MoveToPose.action
+[64.356s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages//pose_traj_controller.egg-info
+[64.357s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages//pose_traj_controller.egg-info/SOURCES.txt
+[64.360s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages//pose_traj_controller.egg-info/dependency_links.txt
+[64.360s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages//pose_traj_controller.egg-info/top_level.txt
+[64.361s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages//pose_traj_controller.egg-info/PKG-INFO
+[64.361s] -- Up-to-date: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller
+[64.362s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/__init__.py
+[64.362s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/pose_traj_controller
+[64.513s] Listing '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller'...
+[64.517s] Compiling '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/__init__.py'...
+[64.517s] Listing '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action'...
+[64.520s] Compiling '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action/__init__.py'...
+[64.520s] Compiling '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages/pose_traj_controller/action/_move_to_pose.py'...
+[64.524s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/pose_traj_controller/pose_traj_controller
+[64.533s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/ament_index/resource_index/package_run_dependencies/pose_traj_controller
+[64.533s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/ament_index/resource_index/parent_prefix_path/pose_traj_controller
+[64.535s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/ament_prefix_path.sh
+[64.542s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/ament_prefix_path.dsv
+[64.544s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/path.sh
+[64.544s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/environment/path.dsv
+[64.545s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/local_setup.bash
+[64.545s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/local_setup.sh
+[64.546s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/local_setup.zsh
+[64.548s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/local_setup.dsv
+[64.548s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.dsv
+[64.550s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/ament_index/resource_index/packages/pose_traj_controller
+[64.551s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_generator_cExport.cmake
+[64.552s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_generator_cExport-noconfig.cmake
+[64.552s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_introspection_cExport.cmake
+[64.553s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[64.557s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_cExport.cmake
+[64.557s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_cExport-noconfig.cmake
+[64.559s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_generator_cppExport.cmake
+[64.559s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_introspection_cppExport.cmake
+[64.561s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[64.563s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_cppExport.cmake
+[64.564s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controller__rosidl_typesupport_cppExport-noconfig.cmake
+[64.565s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/rosidl_cmake-extras.cmake
+[64.566s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+[64.568s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/ament_cmake_export_libraries-extras.cmake
+[64.568s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/ament_cmake_export_targets-extras.cmake
+[64.569s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+[64.571s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[64.572s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[64.572s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controllerConfig.cmake
+[64.573s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/cmake/pose_traj_controllerConfig-version.cmake
+[64.575s] -- Installing: /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.xml
+[64.585s] Invoked command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake --install /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller

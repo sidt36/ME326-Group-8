@@ -1,0 +1,6 @@
+{
+  "package_name": "pose_traj_controller",
+  "non_idl_tuples": [
+    "/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller:action/MoveToPose.action"
+  ]
+}

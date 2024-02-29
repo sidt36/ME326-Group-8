@@ -1,0 +1,123 @@
+[13.938s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[13.938s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f5a1b9fdbe0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=12, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f5a1b9fdbe0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f5a1b9f0730>)
+[14.700s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[14.701s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[14.701s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[14.702s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[14.702s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[14.702s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[14.702s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller'
+[14.703s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[14.703s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[14.703s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[14.703s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[14.703s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[14.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[14.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[14.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[14.704s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[14.847s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'pose_traj_controller'
+[14.847s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[14.847s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[14.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[14.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[14.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[15.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[15.848s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[16.247s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 19 installed packages in /home/sid/interbotix_ws/install
+[16.407s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/sid/autonomy_ws/install
+[16.550s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 335 installed packages in /opt/ros/galactic
+[16.557s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[17.961s] Level 5:colcon.colcon_core.verb:set package 'pose_traj_controller' build argument 'cmake_args' from command line to 'None'
+[17.962s] Level 5:colcon.colcon_core.verb:set package 'pose_traj_controller' build argument 'cmake_target' from command line to 'None'
+[17.962s] Level 5:colcon.colcon_core.verb:set package 'pose_traj_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[17.963s] Level 5:colcon.colcon_core.verb:set package 'pose_traj_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[17.963s] Level 5:colcon.colcon_core.verb:set package 'pose_traj_controller' build argument 'cmake_clean_first' from command line to 'False'
+[17.963s] Level 5:colcon.colcon_core.verb:set package 'pose_traj_controller' build argument 'cmake_force_configure' from command line to 'False'
+[17.963s] Level 5:colcon.colcon_core.verb:set package 'pose_traj_controller' build argument 'ament_cmake_args' from command line to 'None'
+[17.963s] Level 5:colcon.colcon_core.verb:set package 'pose_traj_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[17.964s] Level 5:colcon.colcon_core.verb:set package 'pose_traj_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[17.965s] DEBUG:colcon.colcon_core.verb:Building package 'pose_traj_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller', 'merge_install': False, 'path': '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller', 'symlink_install': False, 'test_result_base': None}
+[18.108s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[18.269s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[18.272s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller' with build type 'ament_cmake'
+[18.273s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller'
+[18.510s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[18.510s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[18.512s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[19.316s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller -DCMAKE_INSTALL_PREFIX=/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller
+[35.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller -DCMAKE_INSTALL_PREFIX=/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller
+[35.351s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake --build /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller -- -j12 -l12
+[81.724s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake --build /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller -- -j12 -l12
+[82.364s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake --install /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller
+[82.857s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pose_traj_controller)
+[82.860s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/sid/autonomy_ws/install/final_project:/home/sid/interbotix_ws/install/interbotix_xs_modules:/home/sid/interbotix_ws/install/interbotix_perception_modules:/home/sid/interbotix_ws/install/interbotix_common_modules:/opt/ros/galactic /usr/bin/cmake --install /home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/build/pose_traj_controller
+[83.179s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller' for CMake module files
+[83.183s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller' for CMake config files
+[83.184s] Level 1:colcon.colcon_core.shell:create_environment_hook('pose_traj_controller', 'cmake_prefix_path')
+[83.391s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/cmake_prefix_path.ps1'
+[83.405s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/cmake_prefix_path.dsv'
+[83.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/cmake_prefix_path.sh'
+[83.417s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib'
+[83.418s] Level 1:colcon.colcon_core.shell:create_environment_hook('pose_traj_controller', 'ld_library_path_lib')
+[83.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/ld_library_path_lib.ps1'
+[83.590s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/ld_library_path_lib.dsv'
+[83.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/ld_library_path_lib.sh'
+[83.592s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/bin'
+[83.592s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/pkgconfig/pose_traj_controller.pc'
+[83.595s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages'
+[83.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('pose_traj_controller', 'pythonpath')
+[83.772s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/pythonpath.ps1'
+[83.773s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/pythonpath.dsv'
+[83.775s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/pythonpath.sh'
+[83.777s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/bin'
+[83.955s] INFO:colcon.colcon_core.shell:Creating package script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.ps1'
+[83.961s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.dsv'
+[83.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.sh'
+[83.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.bash'
+[83.982s] INFO:colcon.colcon_core.shell:Creating package script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.zsh'
+[83.988s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/colcon-core/packages/pose_traj_controller)
+[84.833s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pose_traj_controller)
+[85.075s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller' for CMake module files
+[85.081s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller' for CMake config files
+[85.084s] Level 1:colcon.colcon_core.shell:create_environment_hook('pose_traj_controller', 'cmake_prefix_path')
+[85.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/cmake_prefix_path.ps1'
+[85.278s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/cmake_prefix_path.dsv'
+[85.280s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/cmake_prefix_path.sh'
+[85.286s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib'
+[85.286s] Level 1:colcon.colcon_core.shell:create_environment_hook('pose_traj_controller', 'ld_library_path_lib')
+[85.467s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/ld_library_path_lib.ps1'
+[85.469s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/ld_library_path_lib.dsv'
+[85.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/ld_library_path_lib.sh'
+[85.476s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/bin'
+[85.476s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/pkgconfig/pose_traj_controller.pc'
+[85.479s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/lib/python3.8/site-packages'
+[85.479s] Level 1:colcon.colcon_core.shell:create_environment_hook('pose_traj_controller', 'pythonpath')
+[85.685s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/pythonpath.ps1'
+[85.687s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/pythonpath.dsv'
+[85.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/hook/pythonpath.sh'
+[85.690s] Level 1:colcon.colcon_core.environment:checking '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/bin'
+[85.943s] INFO:colcon.colcon_core.shell:Creating package script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.ps1'
+[85.945s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.dsv'
+[85.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.sh'
+[85.952s] INFO:colcon.colcon_core.shell:Creating package script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.bash'
+[85.954s] INFO:colcon.colcon_core.shell:Creating package script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/pose_traj_controller/package.zsh'
+[85.955s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/pose_traj_controller/share/colcon-core/packages/pose_traj_controller)
+[85.958s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[85.959s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[85.960s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[85.960s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[86.295s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[86.296s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[86.297s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[89.302s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[89.750s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/local_setup.ps1'
+[89.759s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/_local_setup_util_ps1.py'
+[89.792s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/setup.ps1'
+[90.404s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/local_setup.sh'
+[90.415s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/_local_setup_util_sh.py'
+[90.419s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/setup.sh'
+[90.833s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/local_setup.bash'
+[90.844s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/setup.bash'
+[91.487s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/local_setup.zsh'
+[91.503s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sid/autonomy_ws/src/ME326-Group-8-new/pose_traj_controller/install/setup.zsh'

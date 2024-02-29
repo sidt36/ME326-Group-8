@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from pose_traj_controller/action/MoveToPose.action
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module pose_traj_controller {
+  module action {
+    @verbatim (language="comment", text=
+      " Define the goal")
+    struct MoveToPose_Goal {
+      geometry_msgs::msg::Point position;
+
+      double yaw;
+
+      boolean orientation_required;
+    };
+    struct MoveToPose_Result {
+      @verbatim (language="comment", text=
+        " Define the result")
+      boolean pose_reached;
+    };
+    struct MoveToPose_Feedback {
+      @verbatim (language="comment", text=
+        " Define the feedback")
+      string feedback_string;
+    };
+  };
+};

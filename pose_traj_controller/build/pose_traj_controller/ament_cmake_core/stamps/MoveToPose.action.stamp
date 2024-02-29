@@ -1,0 +1,10 @@
+# Define the goal
+geometry_msgs/Point position
+float64 yaw
+bool orientation_required
+---
+# Define the result
+bool pose_reached
+---
+# Define the feedback
+string feedback_string
