@@ -108,7 +108,7 @@ def generate_launch_description():
                     'tag_family': 'tag36h11',
                     'tag_id': 2,
                     'desired_pose_frame': 'world',
-                    'new_node_topic_name': 'center'
+                    'new_node_topic_name': 'b_build_a'
             }],
                 output='screen',
             ),
@@ -120,7 +120,7 @@ def generate_launch_description():
                     'tag_family': 'tag36h11',
                     'tag_id': 3,
                     'desired_pose_frame': 'world',
-                    'new_node_topic_name': 'b_build_a'
+                    'new_node_topic_name': 'b_build_b'
             }],
                 output='screen',
             ),
@@ -132,9 +132,45 @@ def generate_launch_description():
                     'tag_family': 'tag36h11',
                     'tag_id': 4,
                     'desired_pose_frame': 'world',
-                    'new_node_topic_name': 'b_build_b'
+                    'new_node_topic_name': 'center_tl'
             }],
                 output='screen',
-            )
+            ),
+            Node(
+                package='final_project',
+                executable='pose_estimator',
+                name='pose_estimator_node',
+                parameters=[{
+                    'tag_family': 'tag36h11',
+                    'tag_id': 5,
+                    'desired_pose_frame': 'world',
+                    'new_node_topic_name': 'center_tr'
+            }],
+                output='screen',
+            ),
+            Node(
+                package='final_project',
+                executable='pose_estimator',
+                name='pose_estimator_node',
+                parameters=[{
+                    'tag_family': 'tag36h11',
+                    'tag_id': 6,
+                    'desired_pose_frame': 'world',
+                    'new_node_topic_name': 'center_bl'
+            }],
+                output='screen',
+            ),
+            Node(
+                package='final_project',
+                executable='pose_estimator',
+                name='pose_estimator_node',
+                parameters=[{
+                    'tag_family': 'tag36h11',
+                    'tag_id': 7,
+                    'desired_pose_frame': 'world',
+                    'new_node_topic_name': 'center_br'
+            }],
+                output='screen',
+            ),
         ])
     ])
