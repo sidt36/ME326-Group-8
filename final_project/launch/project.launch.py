@@ -42,15 +42,99 @@ def generate_launch_description():
                                  'launch/spawn_april_tags.launch.py')
                 )
             ),
+            Node(
+                package='final_project',
+                executable='static_frame_broadcaster',
+                name='static_frame_broadcaster_node',
+                output='screen',
+            )
         ]),
-        TimerAction(period=5.0, actions=[
+        TimerAction(period=6.0, actions=[
+            Node(
+                package='final_project',
+                executable='world_publisher',
+                name='world_publisher_node',
+                output='screen'
+            ),
             Node(
                 package='pose_traj_controller',
                 executable='pose_traj_controller',
                 name='pose_traj_controller_node',
                 output='screen',
+            ),
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(
+                    os.path.join(get_package_share_directory('apriltag_ros'), 
+                                 'launch/apriltag.launch.py')
+                )
+            )
+        ]),
+        TimerAction(period=7.0, actions=[
+            Node(
+                package='final_project',
+                executable='dummy_subscriber',
+                name='dummy_subscriber_node',
+                output='screen',
+            ),
+            Node(
+                package='final_project',
+                executable='pose_estimator',
+                name='pose_estimator_node',
+                parameters=[{
+                    'tag_family': 'tag36h11',
+                    'tag_id': 0,
+                    'desired_pose_frame': 'world',
+                    'new_node_topic_name': 'a_build_a'
+            }],
+                output='screen',
+            ),
+            Node(
+                package='final_project',
+                executable='pose_estimator',
+                name='pose_estimator_node',
+                parameters=[{
+                    'tag_family': 'tag36h11',
+                    'tag_id': 1,
+                    'desired_pose_frame': 'world',
+                    'new_node_topic_name': 'a_build_b'
+            }],
+                output='screen',
+            ),
+            Node(
+                package='final_project',
+                executable='pose_estimator',
+                name='pose_estimator_node',
+                parameters=[{
+                    'tag_family': 'tag36h11',
+                    'tag_id': 2,
+                    'desired_pose_frame': 'world',
+                    'new_node_topic_name': 'center'
+            }],
+                output='screen',
+            ),
+            Node(
+                package='final_project',
+                executable='pose_estimator',
+                name='pose_estimator_node',
+                parameters=[{
+                    'tag_family': 'tag36h11',
+                    'tag_id': 3,
+                    'desired_pose_frame': 'world',
+                    'new_node_topic_name': 'b_build_a'
+            }],
+                output='screen',
+            ),
+            Node(
+                package='final_project',
+                executable='pose_estimator',
+                name='pose_estimator_node',
+                parameters=[{
+                    'tag_family': 'tag36h11',
+                    'tag_id': 4,
+                    'desired_pose_frame': 'world',
+                    'new_node_topic_name': 'b_build_b'
+            }],
+                output='screen',
             )
         ])
     ])
-
-
