@@ -31,6 +31,13 @@ pose_traj_controller/pose_traj_controller
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Action Perception node
+add_executable(visual_block_perception_srv src/visual_block_perception_srv.cpp)
+ament_target_dependencies(visual_block_perception_srv rclcpp std_msgs geometry_msgs sensor_msgs image_transport cv_bridge tf2_ros tf2_eigen visualization_msgs)
+install(TARGETS
+  visual_block_perception_srv
+  DESTINATION lib/${PROJECT_NAME})
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
