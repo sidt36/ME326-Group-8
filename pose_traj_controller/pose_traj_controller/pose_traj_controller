@@ -13,7 +13,7 @@ import numpy as np
 
 from tf_transformations import euler_from_quaternion
 
-from pose_traj_controller.action import MoveToPose
+from project_messages.action import MoveToPose
 
 VEL_CMD_MSG = '/locobot/diffdrive_controller/cmd_vel_unstamped'
 # POSE_MSG = '/odom'
@@ -37,21 +37,22 @@ class MoveToPoseActionServer(Node):
         self.current_pose = None
         self.target_position = None
         self.target_yaw = None
-        self.orientation_required = False    
+        self.orientation_required = False  
+        self.yaw_only = False  
         self.pos_reached = False
         self.angle_reached = False
         
         # Control parameters
         self.L = 0.1
-        self.goal_reached_error = 0.08
+        self.goal_reached_error = 0.02
         self._cumm_err_2d = np.matrix([[0.0], [0.0]])
         self._cumm_err_angle = 0.0
         self.control_gain = 0.5
-        self.angle_gain = 1.0
+        self.angle_gain = 0.9
         self.Ki_2d_thres = 0.5
         self.Ki_ang_thres = 0.7
         self.Ki_2d = 0.07
-        self.Ki_ang = 0.4
+        self.Ki_ang = 0.35
         
         self._action_server = ActionServer(
             self,
@@ -105,7 +106,12 @@ class MoveToPoseActionServer(Node):
         result = MoveToPose.Result()
             
         # Initialize and start your goal execution logic here, for example:
-        self.init_movement(goal_handle.request.position, goal_handle.request.yaw, goal_handle.request.orientation_required)
+        self.init_movement(
+            goal_handle.request.position, 
+            goal_handle.request.yaw, 
+            goal_handle.request.orientation_required,
+            goal_handle.request.yaw_only
+        )
         
         while not self.pos_reached or not self.angle_reached:
             # If goal is flagged as no longer active (ie. another goal was accepted),
@@ -149,12 +155,13 @@ class MoveToPoseActionServer(Node):
         self.stop_robot()
         return result
 
-    def init_movement(self, target_position, target_yaw, orientation_required):
+    def init_movement(self, target_position, target_yaw, orientation_required, yaw_only):
         # Initialize the robot's movement towards the goal
         self.get_logger().info('Initializing movement...')
         self.target_position = target_position
         self.target_yaw = target_yaw
         self.orientation_required = orientation_required
+        self.yaw_only = yaw_only
         self.pos_reached = False
         self.angle_reached = False
         self._cumm_err_2d = np.matrix([[0.0], [0.0]])
@@ -218,13 +225,13 @@ class MoveToPoseActionServer(Node):
         
         err_mag = np.linalg.norm(error_vect)
         
-        if err_mag < self.goal_reached_error:
+        if err_mag < self.goal_reached_error or self.yaw_only:
             self.pos_reached = True
             self._cumm_err_2d = np.matrix([[0.0], [0.0]])
             control_msg.linear.x = 0.0
             
         if self.pos_reached:
-            if not self.orientation_required or abs(angle_error) <= 0.05:
+            if (not self.yaw_only and not self.orientation_required) or abs(angle_error) <= 0.05:
                 self.angle_reached = True
                 control_msg.angular.z = 0.0
                 self._cumm_err_angle = 0.0
