@@ -19,7 +19,7 @@ setup(
     version='0.0.0',
     packages=[package_name],
     data_files=data_files,
-    install_requires=['setuptools', 'numpy', 'scipy','project_messages'],
+    install_requires=['setuptools', 'numpy', 'scipy'],
     zip_safe=True,
     maintainer='team 8',
     maintainer_email='awesome@stanford.edu',
