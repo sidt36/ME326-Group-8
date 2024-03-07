@@ -51,12 +51,12 @@ class StateMachine(Node):
 
     def get_result_callback(self, future):
         result = future.result().result
-        self.get_logger().info('Result: {0}'.format(result.sequence))
-        rclpy.shutdown()
+        self.get_logger().info('Result: {0}'.format(result.pose_reached))
+        
 
     def feedback_callback(self, feedback_msg):
         feedback = feedback_msg.feedback
-        self.get_logger().info('Received feedback: {0}'.format(feedback.partial_sequence))
+        self.get_logger().info('Received feedback: {0}'.format(feedback.feedback_string))
 
 
 
@@ -65,9 +65,13 @@ def main(args=None):
 
     action_client = StateMachine()
 
-    future = action_client.send_goal(5)
+    future = action_client.send_goal(-1)
 
+    future = action_client.send_goal(2)
+    
     rclpy.spin(action_client)
+
+    rclpy.shutdown()
 
 
 
