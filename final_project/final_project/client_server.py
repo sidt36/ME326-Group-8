@@ -5,6 +5,8 @@ from geometry_msgs.msg import Point
 from std_msgs.msg import Float64
 from std_msgs.msg import Bool
 from pose_traj_controller.action import MoveToPose
+from action_msgs.msg import GoalStatus
+
 
 class StateMachine(Node):
 
@@ -25,6 +27,8 @@ class StateMachine(Node):
         yaw = Float64()
         yaw.data = 0.2
         goal_msg.yaw = yaw.data
+        self.status = GoalStatus.STATUS_EXECUTING
+
 
         orientation_required = Bool()
         orientation_required.data = True
@@ -37,9 +41,9 @@ class StateMachine(Node):
 
         self._send_goal_future.add_done_callback(self.goal_response_callback)
 
-        return self._action_client.send_goal_async(goal_msg)
     def goal_response_callback(self, future):
         goal_handle = future.result()
+        self.status = GoalStatus.STATUS_EXECUTING
         if not goal_handle.accepted:
             self.get_logger().info('Goal rejected')
             return
@@ -51,6 +55,7 @@ class StateMachine(Node):
 
     def get_result_callback(self, future):
         result = future.result().result
+        self.status = GoalStatus.STATUS_SUCCEEDED
         self.get_logger().info('Result: {0}'.format(result.pose_reached))
         
 
@@ -65,11 +70,15 @@ def main(args=None):
 
     action_client = StateMachine()
 
-    future = action_client.send_goal(-1)
+    goals = [-1, -2, 2]
 
-    future = action_client.send_goal(2)
-    
-    rclpy.spin(action_client)
+    for goal in goals:
+
+        action_client.send_goal(goal)
+
+        while action_client.status != GoalStatus.STATUS_SUCCEEDED:
+            rclpy.spin_once(action_client)
+
 
     rclpy.shutdown()
 
