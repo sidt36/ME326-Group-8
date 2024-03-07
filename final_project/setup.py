@@ -33,7 +33,8 @@ setup(
             'static_frame_broadcaster = final_project.static_frame_broadcaster:main',
             'dummy_subscriber = final_project.dummy_subscriber:main',
             'pose_estimator = final_project.pose_estimator:main',
-            'world_publisher = final_project.world_publisher:main',
+            'world_publisher = final_project.world_publisher:main'
+
         ],
     }
 )
