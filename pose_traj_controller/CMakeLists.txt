@@ -9,17 +9,12 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
 find_package(rclpy REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
 find_package(geometry_msgs REQUIRED)
-find_package(action_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(project_messages REQUIRED)
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "action/MoveToPose.action"
-  DEPENDENCIES geometry_msgs action_msgs builtin_interfaces nav_msgs std_msgs
-)
 
 # Install Python modules
 ament_python_install_package(${PROJECT_NAME})
