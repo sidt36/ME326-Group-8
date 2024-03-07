@@ -2,7 +2,6 @@
 geometry_msgs/Point position
 float64 yaw
 bool orientation_required
-bool yaw_only
 ---
 # Define the result
 bool pose_reached

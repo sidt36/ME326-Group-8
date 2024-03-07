@@ -15,6 +15,11 @@
   <depend>rclpy</depend>
   <depend>tf2_ros</depend>
   <depend>geometry_msgs</depend>
+<<<<<<< HEAD
+=======
+  <depend>std_msgs</depend>
+  <depend>action_msgs</depend>
+>>>>>>> action_client
   <depend>nav_msgs</depend>
   <depend>visualization_msgs</depend>
   <depend>sensor_msgs</depend>
