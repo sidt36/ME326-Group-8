@@ -1,5 +1,6 @@
 {
     "python.autoComplete.extraPaths": [
+        "/home/sidharth/me326_ws/install/project_messages/lib/python3.8/site-packages",
         "/home/sidharth/me326_ws/install/pose_traj_controller/lib/python3.8/site-packages",
         "/home/sidharth/me326_ws/install/opencv_tests/lib/python3.8/site-packages",
         "/home/sidharth/me326_ws/install/image_geometry/lib/python3.8/site-packages",
@@ -17,6 +18,7 @@
         "/opt/ros/galactic/lib/python3.8/site-packages"
     ],
     "python.analysis.extraPaths": [
+        "/home/sidharth/me326_ws/install/project_messages/lib/python3.8/site-packages",
         "/home/sidharth/me326_ws/install/pose_traj_controller/lib/python3.8/site-packages",
         "/home/sidharth/me326_ws/install/opencv_tests/lib/python3.8/site-packages",
         "/home/sidharth/me326_ws/install/image_geometry/lib/python3.8/site-packages",

@@ -6,6 +6,7 @@
         "limitSymbolsToIncludedHeaders": false
       },
       "includePath": [
+        "/home/sidharth/me326_ws/install/project_messages/include/**",
         "/home/sidharth/me326_ws/install/pose_traj_controller/include/**",
         "/home/sidharth/me326_ws/install/image_geometry/include/**",
         "/home/sidharth/me326_ws/install/cv_bridge/include/**",

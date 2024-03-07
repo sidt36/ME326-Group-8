@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 import rclpy
 from rclpy.action import ActionClient
 from rclpy.node import Node
 from geometry_msgs.msg import Point
 from std_msgs.msg import Float64
 from std_msgs.msg import Bool
-from pose_traj_controller.action import MoveToPose
+from project_messages.action import MoveToPose
 from action_msgs.msg import GoalStatus
 
 
