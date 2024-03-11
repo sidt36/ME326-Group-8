@@ -8,17 +8,20 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(project_messages REQUIRED)
+find_package(la_msgs REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(action_msgs REQUIRED)
 
+
 ament_python_install_package(${PROJECT_NAME})
 
 # Install Python nodes
 install(PROGRAMS
   ${PROJECT_NAME}/move_base_client.py
+  ${PROJECT_NAME}/perception_client.py
   DESTINATION lib/${PROJECT_NAME}
 )
   
