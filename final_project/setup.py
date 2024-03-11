@@ -19,7 +19,7 @@ setup(
     version='0.0.0',
     packages=[package_name],
     data_files=data_files,
-    install_requires=['setuptools', 'numpy', 'scipy'],
+    install_requires=['setuptools', 'numpy', 'scipy', 'action_client'],
     zip_safe=True,
     maintainer='team 8',
     maintainer_email='awesome@stanford.edu',
@@ -33,8 +33,8 @@ setup(
             'static_frame_broadcaster = final_project.static_frame_broadcaster:main',
             'dummy_subscriber = final_project.dummy_subscriber:main',
             'pose_estimator = final_project.pose_estimator:main',
-            'world_publisher = final_project.world_publisher:main'
-
+            'world_publisher = final_project.world_publisher:main',
+            'state_machine = final_project.state_machine:main',
         ],
     }
 )
