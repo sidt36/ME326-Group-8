@@ -1,0 +1,6 @@
+float32[] pose
+bool pick_or_place
+---
+bool success
+---
+string feedback_string

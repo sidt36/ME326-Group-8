@@ -19,6 +19,8 @@ ament_python_install_package(${PROJECT_NAME})
 # Install Python nodes
 install(PROGRAMS
   ${PROJECT_NAME}/move_base_client.py
+  ${PROJECT_NAME}/move_arm_named_pose_client.py
+  ${PROJECT_NAME}/pick_or_place_client.py
   DESTINATION lib/${PROJECT_NAME}
 )
   

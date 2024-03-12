@@ -16,6 +16,8 @@ find_package(nav_msgs REQUIRED)
 
 set(msg_files
     "action/MoveToPose.action"
+    "action/PickOrPlace.action"
+    "action/MoveArmToNamedPose.action"
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
     ${msg_files}

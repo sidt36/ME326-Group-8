@@ -2,40 +2,20 @@
 import rclpy
 from rclpy.action import ActionClient
 from rclpy.node import Node
-from geometry_msgs.msg import Point
-from std_msgs.msg import Float64
-from std_msgs.msg import Bool
-from project_messages.action import MoveToPose
+from project_messages.action import PickOrPlace
 from action_msgs.msg import GoalStatus
 
-class MoveActionClient(Node):
+class PickOrPlaceActionClient(Node):
 
     def __init__(self):
-        super().__init__('move_base_client')
-        self._action_client = ActionClient(self, MoveToPose, 'move_to_pose')
+        super().__init__('pick_or_place_client')
+        self._action_client = ActionClient(self, PickOrPlace, 'arm_pick_or_place')
 
-    def send_goal(self, cmd_x, cmd_y, cmd_yaw=None, yaw_req=False, yaw_only=False):
-        goal_msg = MoveToPose.Goal()
-
-        position  = Point()
-        position.x = cmd_x
-        position.y = cmd_y
-        goal_msg.position = position
-
-        yaw = Float64()
-        if cmd_yaw == None:
-            yaw.data = 0.0
-        else:
-            yaw.data = cmd_yaw
-        goal_msg.yaw = yaw.data
+    def send_goal(self, pose, pick_or_place):
+        goal_msg = PickOrPlace.Goal()
         
-        orientation_required = Bool()
-        orientation_required.data = yaw_req
-        yaw_only_flag = Bool()
-        yaw_only_flag.data = yaw_only
-        
-        goal_msg.orientation_required = orientation_required.data
-        goal_msg.yaw_only = yaw_only_flag.data
+        goal_msg.pose = pose
+        goal_msg.pick_or_place = pick_or_place
         
         self.status = GoalStatus.STATUS_EXECUTING        
         self._action_client.wait_for_server()
@@ -54,10 +34,24 @@ class MoveActionClient(Node):
 
     def get_result_callback(self, future):
         result = future.result().result
-        self.status = GoalStatus.STATUS_SUCCEEDED
-        self.get_logger().info('Result: {0}'.format(result.pose_reached))
+        if result.success == False:
+            self.status = GoalStatus.STATUS_ABORTED
+        else:
+            self.status = GoalStatus.STATUS_SUCCEEDED
+        self.get_logger().info('Result: {0}'.format(result.success))
 
     def feedback_callback(self, feedback_msg):
         feedback = feedback_msg.feedback
         self.get_logger().info('Received feedback: {0}'.format(feedback.feedback_string))
-
+        
+# def main(args=None):
+#     rclpy.init(args=args)
+#     action_client = PickOrPlaceActionClient()
+#     pose = [0.3, 0.05, 0.01]
+#     action_client.send_goal(pose, True)
+#     rclpy.spin(action_client)
+#     action_client.destroy_node()
+#     rclpy.shutdown()
+    
+# if __name__ == '__main__':
+#     main()
