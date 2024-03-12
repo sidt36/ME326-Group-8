@@ -19,6 +19,8 @@ from action_msgs.msg import GoalStatus
 from action_client.move_base_client import MoveActionClient
 from action_client.move_arm_named_pose_client import MoveArmNamedPoseActionClient
 from action_client.pick_or_place_client import PickOrPlaceActionClient
+from action_client.attach_client import AttachClient
+from action_client.attach_client import DetachClient
 
 POSE_MSG = '/locobot/sim_ground_truth_pose'
 POSE_MSG_TYPE = Odometry
@@ -138,43 +140,47 @@ class StateMachine(Node):
     def move_next_to_center_box(self, margin):
         self.move_next_to_center_box_done_event = Future()
         # First let's calculate the edge of the box closest to us
-        corners_of_box = [
-            [self.center_tr_pose.pose.position.x, self.center_tr_pose.pose.position.y],
-            [self.center_tl_pose.pose.position.x, self.center_tl_pose.pose.position.y],
-            [self.center_br_pose.pose.position.x, self.center_br_pose.pose.position.y],
-            [self.center_bl_pose.pose.position.x, self.center_bl_pose.pose.position.y]
-        ]
+        # corners_of_box = [
+        #     [self.center_tr_pose.pose.position.x, self.center_tr_pose.pose.position.y],
+        #     [self.center_tl_pose.pose.position.x, self.center_tl_pose.pose.position.y],
+        #     [self.center_br_pose.pose.position.x, self.center_br_pose.pose.position.y],
+        #     [self.center_bl_pose.pose.position.x, self.center_bl_pose.pose.position.y]
+        # ]
         
-        center_of_box = [np.mean([corner[0] for corner in corners_of_box]),
-                            np.mean([corner[1] for corner in corners_of_box])]
-        self.logger.info(f"Center of box: {center_of_box}")
+        # center_of_box = [np.mean([corner[0] for corner in corners_of_box]),
+        #                     np.mean([corner[1] for corner in corners_of_box])]
+        # self.logger.info(f"Center of box: {center_of_box}")
         
-        # Distance to each corner
-        distances = [np.sqrt((corner[0] - self.current_pose.pose.pose.position.x)**2 + 
-                             (corner[1] - self.current_pose.pose.pose.position.y)**2) 
-                             for corner in corners_of_box]
+        # # Distance to each corner
+        # distances = [np.sqrt((corner[0] - self.current_pose.pose.pose.position.x)**2 + 
+        #                      (corner[1] - self.current_pose.pose.pose.position.y)**2) 
+        #                      for corner in corners_of_box]
         
-        # Find the two closest corners
-        closest_corners = np.argsort(distances)[:2]
-        self.logger.info(f"Closest corners: {closest_corners}")
+        # # Find the two closest corners
+        # closest_corners = np.argsort(distances)[:2]
+        # self.logger.info(f"Closest corners: {closest_corners}")
         
-        # Find the midpoint of the two closest corners
-        x_mid = (corners_of_box[closest_corners[0]][0] + corners_of_box[closest_corners[1]][0]) / 2
-        y_mid = (corners_of_box[closest_corners[0]][1] + corners_of_box[closest_corners[1]][1]) / 2
-        self.logger.info(f"Midpoint: {x_mid}, {y_mid}")
+        # # Find the midpoint of the two closest corners
+        # x_mid = (corners_of_box[closest_corners[0]][0] + corners_of_box[closest_corners[1]][0]) / 2
+        # y_mid = (corners_of_box[closest_corners[0]][1] + corners_of_box[closest_corners[1]][1]) / 2
+        # self.logger.info(f"Midpoint: {x_mid}, {y_mid}")
         
-        # Anlge from the midpoint to the center of the box
-        angle = np.arctan2(center_of_box[1] - y_mid, center_of_box[0] - x_mid)
-        self.logger.info(f"Angle: {angle}")
+        # # Anlge from the midpoint to the center of the box
+        # angle = np.arctan2(center_of_box[1] - y_mid, center_of_box[0] - x_mid)
+        # self.logger.info(f"Angle: {angle}")
         
-        # Vector from the midpoint to the center of the box
-        vector = [center_of_box[0] - x_mid, center_of_box[1] - y_mid]
-        vector = vector / np.linalg.norm(vector)
-        self.logger.info(f"Vector: {vector}")
+        # # Vector from the midpoint to the center of the box
+        # vector = [center_of_box[0] - x_mid, center_of_box[1] - y_mid]
+        # vector = vector / np.linalg.norm(vector)
+        # self.logger.info(f"Vector: {vector}")
         
-        # Desired position is the midpoint plus a margin in the opposite 
-        # direction of the center of the box
-        desired_position = [x_mid - margin * vector[0], y_mid - margin * vector[1]]
+        # # Desired position is the midpoint plus a margin in the opposite 
+        # # direction of the center of the box
+        # desired_position = [x_mid - margin * vector[0], y_mid - margin * vector[1]]
+        
+        #! REMOVE
+        desired_position = [0.4, 0.0]
+        angle = 0.0
         
         self.logger.info(f"Moving to {desired_position}")
         
@@ -183,19 +189,22 @@ class StateMachine(Node):
         # Sleep for a bit to let the robot settle and update frames
         time.sleep(2.0)
         
-        # Move arm out of way of camera
-        self.move_arm_named_pose('Sleep')
+        # # Move arm out of way of camera
+        # self.move_arm_named_pose('Sleep')
         
-        # Get /tf/camera_locobot_link in world frame
-        transform = self.tf_buffer.lookup_transform('world', 'camera_locobot_link', rclpy.time.Time())
-        # self.logger.info(f"Transform: {transform}")
+        # # Get /tf/camera_locobot_link in world frame
+        # transform = self.tf_buffer.lookup_transform('world', 'camera_locobot_link', rclpy.time.Time())
+        # # self.logger.info(f"Transform: {transform}")
         
-        horizontal_distance = np.sqrt((center_of_box[0] - transform.transform.translation.x)**2 +
-                                        (center_of_box[1] - transform.transform.translation.y)**2)
+        # horizontal_distance = np.sqrt((center_of_box[0] - transform.transform.translation.x)**2 +
+        #                                 (center_of_box[1] - transform.transform.translation.y)**2)
         
-        # Calculate angle from camera locobot link frame to the center of the box
-        angle = np.arctan2(transform.transform.translation.z,
-                            horizontal_distance)
+        # # Calculate angle from camera locobot link frame to the center of the box
+        # angle = np.arctan2(transform.transform.translation.z,
+        #                     horizontal_distance)
+        
+        #! REMOVE
+        angle = 0.92703
         
         # Tilt camera down to look at the center of the box
         self.logger.info(f"Looking at the center of the box with angle {angle}")
@@ -268,20 +277,20 @@ def main(args=None):
     executor = MultiThreadedExecutor()
     executor.add_node(state_machine)
 
-    # Run find_april_tags in a separate thread
-    april_thread = threading.Thread(target=state_machine.find_april_tags)
-    april_thread.start()
+    # # Run find_april_tags in a separate thread
+    # april_thread = threading.Thread(target=state_machine.find_april_tags)
+    # april_thread.start()
 
-    executor.spin_until_future_complete(state_machine.find_april_tag_done_event)
+    # executor.spin_until_future_complete(state_machine.find_april_tag_done_event)
 
-    # Wait for the april_tag_thread to finish
-    april_thread.join()
-    if state_machine.find_april_tag_done_event.result():
-        state_machine.logger.info("All tags found!")
-        # We now don't need the subscriptions to the april tag locations
-        state_machine.destroy_april_tag_subscriptions()
-    else:
-        state_machine.logger.warn("Not all tags found")
+    # # Wait for the april_tag_thread to finish
+    # april_thread.join()
+    # if state_machine.find_april_tag_done_event.result():
+    #     state_machine.logger.info("All tags found!")
+    #     # We now don't need the subscriptions to the april tag locations
+    #     state_machine.destroy_april_tag_subscriptions()
+    # else:
+    #     state_machine.logger.warn("Not all tags found")
         
     # We need to repeat this process x times, where x is the number of objects we need
     # to pick up and place.
@@ -300,8 +309,9 @@ def main(args=None):
     # Spin for a few seconds to make sure transforms are updated
     rclpy.spin_once(state_machine, timeout_sec=3.0)
     
+    #! UPDATE to be dynamic
     # Use the arm to pickup the object of interest
-    pos_in_world = [0.8, 0.05, 0.01]
+    pos_in_world = [0.8, 0.05, 0.03]
     
     state_machine.logger.info(f"Moving arm to world position: {pos_in_world}")
     
@@ -321,10 +331,15 @@ def main(args=None):
     pick_place_thread.join()
     
     #TODO
+    #! Update to be dynamic
     # Attach the block to the gripper to simulate the grasp
+    cube_name = 'blue_cube4'
+    AttachClient().send_request(cube_name)
+    state_machine.move_arm_named_pose('Sleep')
     
     #TODO
     # Move the robot to the dropoff location
+    
     
     # TODO
     # Use the arm to dropoff the object of interest at the designated dropoff location

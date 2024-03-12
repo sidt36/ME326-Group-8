@@ -17,19 +17,27 @@ def generate_launch_description():
     use_lidar_arg = DeclareLaunchArgument('use_lidar', default_value='true')
     hardware_type_arg = DeclareLaunchArgument('hardware_type', default_value='gz_classic')
     use_moveit_rviz_arg = DeclareLaunchArgument('use_moveit_rviz', default_value='true')
+    world_file = os.path.join(get_package_share_directory('final_project'), 'worlds', 'final_project.world')
+    world_file_arg = DeclareLaunchArgument('world', default_value=world_file)
+    rviz_config_file = os.path.join(get_package_share_directory('final_project'), 'config', 'final_project.rviz')
+    rviz_config_file_arg = DeclareLaunchArgument('rviz_config_file', default_value=rviz_config_file)
 
     return LaunchDescription([
         robot_model_arg,
         use_lidar_arg,
         hardware_type_arg,
         use_moveit_rviz_arg,
+        world_file_arg,
+        rviz_config_file_arg,
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(os.path.expanduser(f'{SIM_FILE_PATH}/xslocobot_moveit.launch.py')),
             launch_arguments={
                 'robot_model': LaunchConfiguration('robot_model'),
                 'use_lidar': LaunchConfiguration('use_lidar'),
                 'hardware_type': LaunchConfiguration('hardware_type'),
-                'use_moveit_rviz': LaunchConfiguration('use_moveit_rviz')
+                'use_moveit_rviz': LaunchConfiguration('use_moveit_rviz'),
+                'rviz_config_file': LaunchConfiguration('rviz_config_file'),
+                'world_filepath': LaunchConfiguration('world')
             }.items()
         ),
         TimerAction(period=5.0, actions=[

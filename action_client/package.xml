@@ -17,6 +17,8 @@
   <depend>visualization_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>project_messages</depend>
+  <depend>la_msgs</depend>
+  <depend>gazebo_ros_link_attacher</depend>
 
 
   <export>

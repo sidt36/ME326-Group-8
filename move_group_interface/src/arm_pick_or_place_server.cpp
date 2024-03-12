@@ -117,7 +117,7 @@ private:
       addBoxToScene(0.0);
       [[maybe_unused]] bool move_to_grasp_success = planAndMoveToPose(move_group_interface_arm, poses.grasp);
       removeCubeFromScene();
-      [[maybe_unused]] bool gripper_close_success = planAndMoveToNamedTarget(move_group_interface_gripper, "Grasping");
+      [[maybe_unused]] bool gripper_close_success = planAndMoveToNamedTarget(move_group_interface_gripper, "Home");
       removeBoxFromScene();
     } else {
       // pick_or_place = false means place
@@ -130,16 +130,6 @@ private:
     result->success = true;
     goal_handle->succeed(result);
     
-    // // Set the target pose which is a named pose (string)
-    // if(planAndMoveToNamedTarget(goal->pose)) {
-    //   RCLCPP_INFO(this->get_logger(), "Motion executed successfully!");
-    //   result->success = true;
-    //   goal_handle->succeed(result);
-    // } else {
-    //   RCLCPP_ERROR(this->get_logger(), "MoveGroupInterface::execute() failed or timeout reached");
-    //   result->success = false;
-    //   goal_handle->abort(result);
-    // }
 
     RCLCPP_INFO(this->get_logger(), "Pick or place completed.");
   }
@@ -215,17 +205,17 @@ private:
     // Pre-grasp pose: slightly above the block
     poses.pre_grasp.position.x = block_pose.position.x;
     poses.pre_grasp.position.y = block_pose.position.y;
-    poses.pre_grasp.position.z = block_pose.position.z + 0.1; // 10 cm above
+    poses.pre_grasp.position.z = block_pose.position.z + 0.01; // 1 cm above
 
     // Grasp pose: at the block's position (adjust z if needed to match your gripper's characteristics)
     poses.grasp.position.x = block_pose.position.x;
     poses.grasp.position.y = block_pose.position.y;
-    poses.grasp.position.z = block_pose.position.z + 0.017; // Assuming grasp at the block level
+    poses.grasp.position.z = block_pose.position.z + 0.006; // Assuming grasp at the block level
 
     // Release pose: slightly above the grasp pose
     poses.release.position.x = block_pose.position.x;
     poses.release.position.y = block_pose.position.y;
-    poses.release.position.z = block_pose.position.z + 0.1; // 10 cm above, similar to pre-grasp
+    poses.release.position.z = block_pose.position.z + 0.05; // 5 cm above, similar to pre-grasp
 
     return poses;
   }
@@ -235,13 +225,13 @@ private:
       moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 
       // Define the box dimensions and pose
-      double depth = 0.015;  // Box height in meters
-      double width = 0.015;  // Box width in meters
-      double height = 0.015;  // Box length in meters
+      double depth = 0.017;  // Box height in meters
+      double width = 0.017;  // Box width in meters
+      double height = 0.017;  // Box length in meters
 
       // Define the collision object
       moveit_msgs::msg::CollisionObject collision_object;
-      collision_object.header.frame_id = "locobot/base_link";  // Adjust according to your frame
+      collision_object.header.frame_id = "locobot/base_link";  
       collision_object.id = "cube";
 
       shape_msgs::msg::SolidPrimitive primitive;
