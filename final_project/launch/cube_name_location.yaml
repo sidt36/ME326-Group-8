@@ -1,0 +1,289 @@
+Cube1:
+  color: 'red'
+  arguments:
+    entity: 'red_cube1'
+    x: 0.8
+    y: 0.35
+    z: 0.1
+  Enabled: 1
+
+Cube2:
+  color: 'red'
+  arguments:
+    entity: 'red_cube2'
+    x: 0.85
+    y: 0.25
+    z: 0.1
+  Enabled: 1  
+
+Cube3:
+  color: 'red'
+  arguments:
+    entity: 'red_cube3'
+    x: 0.9
+    y: 0.15
+    z: 0.1
+  Enabled: 1  
+
+Cube4:
+  color: 'red'
+  arguments:
+    entity: 'red_cube4'
+    x: 0.95
+    y: 0.05
+    z: 0.1
+  Enabled: 1
+
+Cube5:
+  color: 'blue'
+  arguments:
+    entity: 'blue_cube1'
+    x: 0.85
+    y: 0.35
+    z: 0.1
+  Enabled: 1
+
+Cube6:
+  color: 'blue'
+  arguments:
+    entity: 'blue_cube2'
+    x: 0.9
+    y: 0.25
+    z: 0.1
+  Enabled: 1  
+
+Cube7:
+  color: 'blue'
+  arguments:
+    entity: 'blue_cube3'
+    x: 0.95
+    y: 0.15
+    z: 0.1
+  Enabled: 1  
+
+Cube8:
+  color: 'blue'
+  arguments:
+    entity: 'blue_cube4'
+    x: 0.8
+    y: 0.05
+    z: 0.1
+  Enabled: 1
+
+Cube9:
+  color: 'yellow'
+  arguments:
+    entity: 'yellow_cube1'
+    x: 0.9
+    y: 0.35
+    z: 0.1
+  Enabled: 1
+
+Cube10:
+  color: 'yellow'
+  arguments:
+    entity: 'yellow_cube2'
+    x: 0.95
+    y: 0.25
+    z: 0.1
+  Enabled: 1  
+
+Cube11:
+  color: 'yellow'
+  arguments:
+    entity: 'yellow_cube3'
+    x: 0.8
+    y: 0.15
+    z: 0.1
+  Enabled: 1  
+
+Cube12:
+  color: 'yellow'
+  arguments:
+    entity: 'yellow_cube4'
+    x: 0.85
+    y: 0.05
+    z: 0.1
+  Enabled: 1
+
+Cube13:
+  color: 'green'
+  arguments:
+    entity: 'green_cube1'
+    x: 0.95
+    y: 0.35
+    z: 0.1
+  Enabled: 1
+
+Cube14:
+  color: 'green'
+  arguments:
+    entity: 'green_cube2'
+    x: 0.8
+    y: 0.25
+    z: 0.1
+  Enabled: 1  
+
+Cube15:
+  color: 'green'
+  arguments:
+    entity: 'green_cube3'
+    x: 0.85
+    y: 0.15
+    z: 0.1
+  Enabled: 1  
+
+Cube16:
+  color: 'green'
+  arguments:
+    entity: 'green_cube4'
+    x: 0.9
+    y: 0.05
+    z: 0.1
+  Enabled: 1
+
+# ... continue for the rest of the cubes
+
+Cube17:
+  color: 'red'
+  arguments:
+    entity: 'red_cube5'
+    x: 0.8
+    y: -0.05
+    z: 0.1
+  Enabled: 1
+
+Cube18:
+  color: 'red'
+  arguments:
+    entity: 'red_cube6'
+    x: 0.85
+    y: -0.15
+    z: 0.1
+  Enabled: 1  
+
+Cube19:
+  color: 'red'
+  arguments:
+    entity: 'red_cube7'
+    x: 0.9
+    y: -0.25
+    z: 0.1
+  Enabled: 1  
+
+Cube20:
+  color: 'red'
+  arguments:
+    entity: 'red_cube8'
+    x: 0.95
+    y: -0.35
+    z: 0.1
+  Enabled: 1
+
+Cube21:
+  color: 'blue'
+  arguments:
+    entity: 'blue_cube5'
+    x: 0.85
+    y: -0.05
+    z: 0.1
+  Enabled: 1
+
+Cube22:
+  color: 'blue'
+  arguments:
+    entity: 'blue_cube6'
+    x: 0.9
+    y: -0.15
+    z: 0.1
+  Enabled: 1  
+
+Cube23:
+  color: 'blue'
+  arguments:
+    entity: 'blue_cube7'
+    x: 0.95
+    y: -0.25
+    z: 0.1
+  Enabled: 1  
+
+Cube24:
+  color: 'blue'
+  arguments:
+    entity: 'blue_cube8'
+    x: 0.8
+    y: -0.35
+    z: 0.1
+  Enabled: 1
+
+Cube25:
+  color: 'yellow'
+  arguments:
+    entity: 'yellow_cube5'
+    x: 0.9
+    y: -0.05
+    z: 0.1
+  Enabled: 1
+
+Cube26:
+  color: 'yellow'
+  arguments:
+    entity: 'yellow_cube6'
+    x: 0.95
+    y: -0.15
+    z: 0.1
+  Enabled: 1  
+
+Cube27:
+  color: 'yellow'
+  arguments:
+    entity: 'yellow_cube7'
+    x: 0.8
+    y: -0.25
+    z: 0.1
+  Enabled: 1  
+
+Cube28:
+  color: 'yellow'
+  arguments:
+    entity: 'yellow_cube8'
+    x: 0.85
+    y: -0.35
+    z: 0.1
+  Enabled: 1
+
+Cube29:
+  color: 'green'
+  arguments:
+    entity: 'green_cube5'
+    x: 0.95
+    y: -0.05
+    z: 0.1
+  Enabled: 1
+
+Cube30:
+  color: 'green'
+  arguments:
+    entity: 'green_cube6'
+    x: 0.8
+    y: -0.15
+    z: 0.1
+  Enabled: 1  
+
+Cube31:
+  color: 'green'
+  arguments:
+    entity: 'green_cube7'
+    x: 0.85
+    y: -0.25
+    z: 0.1
+  Enabled: 1  
+
+Cube32:
+  color: 'green'
+  arguments:
+    entity: 'green_cube8'
+    x: 0.9
+    y: -0.35
+    z: 0.1
+  Enabled: 1
