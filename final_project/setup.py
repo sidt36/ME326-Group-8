@@ -14,6 +14,7 @@ data_files=[
     ('share/' + package_name + '/model', glob('model/*.urdf')),
     ('share/' + package_name + '/worlds', glob('worlds/*.world')),
     ('share/' + package_name + '/config', glob('config/*.rviz')),
+    ('share/' + package_name + '/pattern', glob('pattern/*.yaml')),
 ]
 
 setup(
@@ -21,7 +22,11 @@ setup(
     version='0.0.0',
     packages=[package_name],
     data_files=data_files,
-    install_requires=['setuptools', 'numpy', 'scipy', 'action_client'],
+    install_requires=[
+        'setuptools', 
+        'action_client', 
+        'ament_index_python'
+    ],
     zip_safe=True,
     maintainer='team 8',
     maintainer_email='awesome@stanford.edu',

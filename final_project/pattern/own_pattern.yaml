@@ -1,0 +1,25 @@
+block_pattern:
+  - block_id: 1
+    color: "blue"
+    position:
+      x: 0.05
+      y: 0.0
+    name: "blue_cube4"
+  - block_id: 2
+    color: "red"
+    position:
+      x: -0.05
+      y: 0.0
+    name: "red_cube5"
+  - block_id: 3
+    color: "green"
+    position:
+      x: -0.05
+      y: 0.08
+    name: "green_cube6"
+  - block_id: 4
+    color: "yellow"
+    position:
+      x: 0.05
+      y: 0.08
+    name: "yellow_cube3"

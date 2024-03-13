@@ -370,12 +370,12 @@ std::vector<geometry_msgs::msg::PointStamped> Matching_Pix_to_Ptcld::register_rg
         geometry_msgs::msg::PointStamped point_3d_geom_msg; 
         point_3d_geom_msg.header = msg_header;
 
-        std::string point_frame_id;
-        if (desired_block_frame_.empty()) {
-          point_frame_id = "locobot/base_link"; // service has not populated this variable yet, so use the base link frame
-        } else {
-          point_frame_id = desired_block_frame_; // Service has requested a specific frame
-        }
+        // std::string point_frame_id;
+        // if (desired_block_frame_.empty()) {
+        //   point_frame_id = "locobot/base_link"; // service has not populated this variable yet, so use the base link frame
+        // } else {
+        //   point_frame_id = desired_block_frame_; // Service has requested a specific frame
+        // }
         // point_3d_geom_msg.header.frame_id = point_frame_id;
         point_3d_geom_msg.point.x = point_3d.x;
         point_3d_geom_msg.point.y = point_3d.y;
@@ -383,22 +383,24 @@ std::vector<geometry_msgs::msg::PointStamped> Matching_Pix_to_Ptcld::register_rg
         //Transform the point to the pointcloud frame using tf
         std::string point_cloud_frame = "locobot/camera_depth_link";// This needed to be fixed, camera model frame was incorrect for depth. camera_model_.tfFrame();
         // Get the camera pose in the desired reference frame
-        geometry_msgs::msg::TransformStamped transform;
-        try {
-            transform = tf_buffer_->lookupTransform(
-               point_frame_id, point_cloud_frame,
-              tf2::TimePointZero);
-        } catch (const tf2::TransformException & ex) {
-            RCLCPP_INFO(
-              this->get_logger(), "Could not transform %s to %s: %s",
-               point_frame_id.c_str(), point_cloud_frame.c_str(), ex.what());
-            return general_3d_cloud;
-          }
+        // geometry_msgs::msg::TransformStamped transform;
+        // try {
+        //     transform = tf_buffer_->lookupTransform(
+        //        point_frame_id, point_cloud_frame,
+        //       tf2::TimePointZero);
+        // } catch (const tf2::TransformException & ex) {
+        //     RCLCPP_INFO(
+        //       this->get_logger(), "Could not transform %s to %s: %s",
+        //        point_frame_id.c_str(), point_cloud_frame.c_str(), ex.what());
+        //     return general_3d_cloud;
+        //   }
         // Transform a point cloud point
-        tf2::doTransform(point_3d_geom_msg, point_3d_from_ptcld, transform); // syntax: (points_in, points_out, transform)
+        point_3d_geom_msg.header.frame_id = point_cloud_frame;
+        // tf2::doTransform(point_3d_geom_msg, point_3d_from_ptcld, transform); // syntax: (points_in, points_out, transform)
         //Put this point into the list of pointstamps:
-        point_3d_from_ptcld.header.frame_id = point_frame_id;
-        general_3d_cloud.push_back(point_3d_from_ptcld);
+        // point_3d_from_ptcld.header.frame_id = point_frame_id;
+        // general_3d_cloud.push_back(point_3d_from_ptcld);
+        general_3d_cloud.push_back(point_3d_geom_msg);
       }
     }
   }

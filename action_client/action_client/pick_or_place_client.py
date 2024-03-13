@@ -44,14 +44,3 @@ class PickOrPlaceActionClient(Node):
         feedback = feedback_msg.feedback
         self.get_logger().info('Received feedback: {0}'.format(feedback.feedback_string))
         
-# def main(args=None):
-#     rclpy.init(args=args)
-#     action_client = PickOrPlaceActionClient()
-#     pose = [0.3, 0.05, 0.01]
-#     action_client.send_goal(pose, True)
-#     rclpy.spin(action_client)
-#     action_client.destroy_node()
-#     rclpy.shutdown()
-    
-# if __name__ == '__main__':
-#     main()
