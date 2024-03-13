@@ -99,7 +99,6 @@ class PerceptionClient(Node):
 
         self.get_logger().info('Results Done!')
 
-        self.destroy_node()
         
 
         return closest_red, closest_blue, closest_green, closest_yellow
@@ -109,4 +108,6 @@ class PerceptionClient(Node):
 #     rclpy.init(args=None)
 #     minimal_client = PerceptionClient()
 #     print(minimal_client.closest_blocks('world', 0, 0))
+
+#     print(minimal_client.closest_blocks('camera', 0, 0))
 #     rclpy.shutdown()
