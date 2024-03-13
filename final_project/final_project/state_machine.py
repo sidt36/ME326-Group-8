@@ -25,6 +25,10 @@ from std_msgs.msg import Float64MultiArray
 from nav_msgs.msg import Odometry
 from rclpy.qos import qos_profile_sensor_data
 
+from gazebo_msgs.msg import ModelStates
+from gazebo_msgs.msg import LinkStates
+
+
 from action_msgs.msg import GoalStatus
 from action_client.move_base_client import MoveActionClient
 from action_client.move_arm_named_pose_client import MoveArmNamedPoseActionClient
@@ -79,6 +83,7 @@ class StateMachine(Node):
             self.block_pattern = block_pattern_data['block_pattern']
         
         self.current_pose = None
+        self.model_states = dict()
         
         self.center_tr_pose = None
         self.center_tl_pose = None
@@ -117,12 +122,23 @@ class StateMachine(Node):
         self.current_pose_done_event = Future()
         self.main_logic_done_event = None
         
+        self.create_subscription(
+            ModelStates,
+            '/gazebo/model_states',
+            self.model_states_callback,
+            qos_profile_sensor_data
+        )
+        
         self.create_subscription(POSE_MSG_TYPE, POSE_MSG, self.pose_callback, qos_profile_sensor_data)
         self.tf_buffer = Buffer(cache_time=rclpy.duration.Duration(seconds=5))
         self.tf_listener = TransformListener(self.tf_buffer, self, qos=50)
 
+    def model_states_callback(self, msg):
+        for i, name in enumerate(msg.name):
+            self.model_states[name] = msg.pose[i]
+
     def pose_callback(self, msg):
-        self.logger.info(f"Received pose message: {msg.header.stamp}")
+        # self.logger.info(f"Received pose message: {msg.header.stamp}")
         self.current_pose = msg
         self.current_pose_done_event.set_result(True)
     
@@ -291,7 +307,7 @@ class StateMachine(Node):
         self.move_to_goal([desired_position[0], desired_position[1], angle, True, False])
         
         # Sleep for a bit to let the robot settle and update frames
-        time.sleep(2.0)
+        rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
         
         # Move arm out of way of camera
         self.move_arm_named_pose('Sleep')
@@ -487,7 +503,34 @@ class StateMachine(Node):
         self.pick_or_place([pos_in_locobot_frame[0], pos_in_locobot_frame[1], 0.0], False)
         
         self.place_block_done_event.set_result(True)
+    
+    def find_closest_cube(self):
+        now = self.get_clock().now().to_msg()
+        rclpy.spin_until_future_complete(self, Future(), timeout_sec=0.1)
+        transform = self.tf_buffer.lookup_transform('world', 'locobot/gripper_link', now)
         
+        # self.logger.info(f"Gripper_link_tf:  {transform}")
+        
+        robot_x = transform.transform.translation.x
+        robot_y = transform.transform.translation.y
+        
+        min_distance = 100000
+        min_cube_name = None
+        for model_name, pose in self.model_states.items():
+            # self.logger.info(f"Model: {model_name}")
+            if 'cube' in model_name:
+                cube_x = pose.position.x
+                cube_y = pose.position.y
+                
+                distance = np.sqrt((robot_x - cube_x)**2 + (robot_y - cube_y)**2)
+                # self.logger.info(f"Distance to {model_name}: {distance}")
+                if distance < min_distance:
+                    min_distance = distance
+                    min_cube_name = model_name
+        self.logger.info(f"Closest cube: {min_cube_name}")
+        self.logger.info(f"Distance: {min_distance}")
+        return min_cube_name
+    
     def main_logic(self):
         self.main_logic_done_event = Future()
         
@@ -516,7 +559,9 @@ class StateMachine(Node):
             
             rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
             
-            cube_name = block['name']
+            cube_name = self.find_closest_cube()
+            # cube_name = block['name']
+            
             self.attach_client.send_request(cube_name)
             self.move_arm_named_pose('Sleep')
             
@@ -546,9 +591,13 @@ class StateMachine(Node):
             
             self.place_block_at_location(pos)
             
-            self.detach_client.send_request(block['name'])
+            self.detach_client.send_request(cube_name)
             self.move_arm_named_pose('Sleep')   
             rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
+        
+        goal = [0.0, 0.0, 0.0, True, False]
+        self.move_to_goal(goal)
+        rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
         
         self.main_logic_done_event.set_result(True)  
                
@@ -567,110 +616,6 @@ def main(args=None):
     
     executor.spin_until_future_complete(state_machine.main_logic_done_event)
     main_thread.join()
-
-    # Run find_april_tags in a separate thread
-    # april_thread = threading.Thread(target=state_machine.find_april_tags)
-    # april_thread.start()
-
-    # executor.spin_until_future_complete(state_machine.find_april_tag_done_event)
-
-    # Wait for the april_tag_thread to finish
-    # april_thread.join()
-    # if state_machine.find_april_tag_done_event.result():
-        # state_machine.logger.info("All tags found!")
-        # We now don't need the subscriptions to the april tag locations
-        # state_machine.destroy_april_tag_subscriptions()
-    # else:
-        # state_machine.logger.warn("Not all tags found")
-        
-    # We need to repeat this process x times, where x is the number of objects we need
-    # to pick up and place.
-    # for block in state_machine.block_pattern:
-    #     # Move next to the center box
-    #     block_color = block['color']
-    #     state_machine.logger.info(f"Moving next to the center box to find the closest {block_color} block")
-    
-    #     move_near_center_box_thread = threading.Thread(target=state_machine.move_next_to_center_box, args=(0.35,))
-    #     move_near_center_box_thread.start()
-        
-    #     executor.spin_until_future_complete(state_machine.move_next_to_center_box_done_event)
-    #     move_near_center_box_thread.join()
-        
-    #     executor.spin_until_future_complete(Future(), timeout_sec=2.0)
-        
-    #     #TODO 
-    #     # Use the percpetion service to find the object of interest
-    #     percep_thread = threading.Thread(target=preception_client.closest_blocks, args=(block_color,))
-    #     percep_thread.start()
-        
-    #     executor.spin_until_future_complete(preception_client.done_event)
-    #     percep_thread.join()
-        
-    #     state_machine.logger.info(f"Closest {block_color} block: {preception_client.block_pos}")
-    #     state_machine.block_pos = preception_client.block_pos
-        
-    #     # use_perception_thread = threading.Thread(target=state_machine.use_perception_closest_block, args=(block_color,))
-    #     # use_perception_thread.start()
-        
-    #     # executor.spin_until_future_complete(state_machine.perception_done_event)
-    #     # use_perception_thread.join()
-        
-    #     # Use the arm to pickup the object of interest
-    #     pos_in_base_link = [state_machine.block_pos[0], state_machine.block_pos[1], 0.03]
-        
-    #     state_machine.logger.info(f"Moving arm to locobot/base_link frame position: {pos_in_base_link}")
-        
-    #     pick_place_thread = threading.Thread(target=state_machine.pick_or_place, args=(pos_in_base_link, True))
-    #     pick_place_thread.start()
-        
-    #     executor.spin_until_future_complete(state_machine.move_arm_done_event)
-    #     pick_place_thread.join()
-        
-    #     #TODO
-    #     # Attach the block to the gripper to simulate the grasp
-    #     #! Update to be function baed on write_location
-    #     cube_name = block['name']
-    #     state_machine.attach_client.send_request(cube_name)
-    #     state_machine.move_arm_named_pose('Sleep')
-        
-    #     #TODO
-    #     # Move the robot to the dropoff location
-    #     desired_relative_position = [block['position']['x'], block['position']['y']]
-    #     state_machine.logger.info(f"Desired relative position: {desired_relative_position}")
-        
-    #     executor.spin_until_future_complete(Future(), timeout_sec=2.0)
-        
-    #     build_pose = getattr(state_machine, f'{OWN_BUILD}_pose')
-    #     state_machine.logger.info(f"Own build pose: {build_pose}")
-        
-    #     executor.spin_until_future_complete(Future(), timeout_sec=2.0)
-    #     pos, yaw = state_machine.calcualte_pos_yaw_from_tag_pose(build_pose, 0.0, -0.25)
-        
-    #     goal = [pos[0], pos[1], yaw, True, False]
-    #     state_machine.logger.info(f"Moving to goal: {goal}")
-    #     move_to_goal_thread = threading.Thread(target=state_machine.move_to_goal, args=(goal,))
-    #     move_to_goal_thread.start()
-    #     executor.spin_until_future_complete(state_machine.move_to_goal_done_event)
-    #     move_to_goal_thread.join()
-        
-    #     state_machine.logger.info(f"Rejoined after moving to goal")
-    #     state_machine.logger.info(f"Current Pose: {state_machine.current_pose}")
-        
-    #     # TODO
-    #     # Use the arm to dropoff the object of interest at the designated dropoff location
-    #     pos, _ = state_machine.calcualte_pos_yaw_from_tag_pose(
-    #         build_pose, 
-    #         desired_relative_position[0] + PATTERN_OFFSET_X, 
-    #         desired_relative_position[1] + PATTERN_OFFSET_Y
-    #     )
-        
-    #     place_thread = threading.Thread(target=state_machine.place_block_at_location, args=(pos,))
-    #     place_thread.start()
-    #     executor.spin_until_future_complete(state_machine.place_block_done_event)
-    #     place_thread.join()
-        
-    #     state_machine.detach_client.send_request(cube_name)
-    #     state_machine.move_arm_named_pose('Sleep')
     
     executor.shutdown()
     state_machine.destroy_node()
