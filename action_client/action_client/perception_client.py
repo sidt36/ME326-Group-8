@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import sys
 
+import sys
 from la_msgs.srv import Ptps
 import rclpy
 from rclpy.node import Node
@@ -105,8 +105,8 @@ class PerceptionClient(Node):
         return closest_red, closest_blue, closest_green, closest_yellow
 
 
-if __name__ == '__main__':
-    rclpy.init(args=None)
-    minimal_client = PerceptionClient()
-    print(minimal_client.closest_blocks('world', 0, 0))
-    rclpy.shutdown()
+# if __name__ == '__main__':
+#     rclpy.init(args=None)
+#     minimal_client = PerceptionClient()
+#     print(minimal_client.closest_blocks('world', 0, 0))
+#     rclpy.shutdown()

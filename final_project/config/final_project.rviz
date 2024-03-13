@@ -1,0 +1,1132 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /TF1/Frames1
+      Splitter Ratio: 0.5
+    Tree Height: 309
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded:
+      - /2D Goal Pose1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz_common/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 255; 255; 255
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Acceleration_Scaling_Factor: 0.1
+      Class: moveit_rviz_plugin/MotionPlanning
+      Enabled: true
+      Move Group Namespace: ""
+      MoveIt_Allow_Approximate_IK: false
+      MoveIt_Allow_External_Program: false
+      MoveIt_Allow_Replanning: false
+      MoveIt_Allow_Sensor_Positioning: false
+      MoveIt_Planning_Attempts: 10
+      MoveIt_Planning_Time: 5
+      MoveIt_Use_Cartesian_Path: false
+      MoveIt_Use_Constraint_Aware_IK: true
+      MoveIt_Warehouse_Host: 127.0.0.1
+      MoveIt_Warehouse_Port: 33829
+      MoveIt_Workspace:
+        Center:
+          X: 0
+          Y: 0
+          Z: 0
+        Size:
+          X: 2
+          Y: 2
+          Z: 2
+      Name: MotionPlanning
+      Planned Path:
+        Color Enabled: false
+        Interrupt Display: false
+        Links:
+          All Links Enabled: true
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Link Tree Style: Links in Alphabetic Order
+          camera_locobot_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          cliff_front_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          cliff_front_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          cliff_side_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          cliff_side_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ar_tag_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/arm_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/arm_stand_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/battery_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/bump_caster_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/bump_front_center:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/bump_front_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/bump_front_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/bump_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/bump_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/button_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/button_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/button_power:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/camera_depth_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/camera_tower_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/ee_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ee_gripper_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/fingers_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/front_caster_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/gripper_bar_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/gripper_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/gripper_prop_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/imu_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_front_center_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_front_center_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_front_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_front_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_side_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_omni:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/laser_frame_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/left_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/left_wheel:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/lidar_tower_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/lower_forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/mouse:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/pan_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/plate_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/right_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/right_wheel:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/shoulder_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/tilt_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/upper_forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/wheel_drop_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/wheel_drop_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/wrist_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+        Loop Animation: false
+        Robot Alpha: 0.5
+        Robot Color: 150; 50; 150
+        Show Robot Collision: false
+        Show Robot Visual: false
+        Show Trail: false
+        State Display Time: 3x
+        Trail Step Size: 1
+        Trajectory Topic: /display_planned_path
+      Planning Metrics:
+        Payload: 1
+        Show Joint Torques: false
+        Show Manipulability: false
+        Show Manipulability Index: false
+        Show Weight Limit: false
+        TextHeight: 0.07999999821186066
+      Planning Request:
+        Colliding Link Color: 255; 0; 0
+        Goal State Alpha: 1
+        Goal State Color: 250; 128; 0
+        Interactive Marker Size: 0
+        Joint Violation Color: 255; 0; 255
+        Planning Group: interbotix_arm
+        Query Goal State: false
+        Query Start State: false
+        Show Workspace: false
+        Start State Alpha: 1
+        Start State Color: 0; 255; 0
+      Planning Scene Topic: /monitored_planning_scene
+      Robot Description: robot_description
+      Scene Geometry:
+        Scene Alpha: 0.8999999761581421
+        Scene Color: 50; 230; 50
+        Scene Display Time: 0.009999999776482582
+        Show Scene Geometry: true
+        Voxel Coloring: Z-Axis
+        Voxel Rendering: Occupied Voxels
+      Scene Robot:
+        Attached Body Color: 150; 50; 150
+        Links:
+          All Links Enabled: true
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Link Tree Style: Links in Alphabetic Order
+          camera_locobot_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          cliff_front_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          cliff_front_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          cliff_side_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          cliff_side_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ar_tag_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/arm_base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/arm_stand_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/base_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/battery_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/bump_caster_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/bump_front_center:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/bump_front_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/bump_front_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/bump_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/bump_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/button_1:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/button_2:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/button_power:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/camera_depth_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/camera_tower_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/ee_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ee_gripper_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/fingers_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/front_caster_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/gripper_bar_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/gripper_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/gripper_prop_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/imu_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_front_center_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_front_center_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_front_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_front_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_intensity_side_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/ir_omni:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/laser_frame_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/left_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/left_wheel:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/lidar_tower_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/lower_forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/mouse:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/pan_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/plate_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/right_finger_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/right_wheel:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/shoulder_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/tilt_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/upper_arm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/upper_forearm_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          locobot/wheel_drop_left:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/wheel_drop_right:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+          locobot/wrist_link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+        Robot Alpha: 1
+        Show Robot Collision: false
+        Show Robot Visual: true
+      Value: true
+      Velocity_Scaling_Factor: 0.1
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        camera_image_frame:
+          Value: false
+        camera_locobot_link:
+          Value: false
+        cliff_front_left:
+          Value: false
+        cliff_front_right:
+          Value: false
+        cliff_side_left:
+          Value: false
+        cliff_side_right:
+          Value: false
+        locobot/ar_tag_link:
+          Value: false
+        locobot/arm_base_link:
+          Value: false
+        locobot/arm_stand_link:
+          Value: false
+        locobot/base_footprint:
+          Value: false
+        locobot/base_link:
+          Value: false
+        locobot/battery_link:
+          Value: false
+        locobot/bump_caster_link:
+          Value: false
+        locobot/bump_front_center:
+          Value: false
+        locobot/bump_front_left:
+          Value: false
+        locobot/bump_front_right:
+          Value: false
+        locobot/bump_left:
+          Value: false
+        locobot/bump_right:
+          Value: false
+        locobot/button_1:
+          Value: false
+        locobot/button_2:
+          Value: false
+        locobot/button_power:
+          Value: false
+        locobot/camera_depth_link:
+          Value: false
+        locobot/camera_tower_link:
+          Value: false
+        locobot/ee_arm_link:
+          Value: false
+        locobot/ee_gripper_link:
+          Value: false
+        locobot/fingers_link:
+          Value: false
+        locobot/front_caster_link:
+          Value: false
+        locobot/gripper_bar_link:
+          Value: false
+        locobot/gripper_link:
+          Value: false
+        locobot/gripper_prop_link:
+          Value: false
+        locobot/imu_link:
+          Value: false
+        locobot/ir_intensity_front_center_left:
+          Value: false
+        locobot/ir_intensity_front_center_right:
+          Value: false
+        locobot/ir_intensity_front_left:
+          Value: false
+        locobot/ir_intensity_front_right:
+          Value: false
+        locobot/ir_intensity_left:
+          Value: false
+        locobot/ir_intensity_right:
+          Value: false
+        locobot/ir_intensity_side_left:
+          Value: false
+        locobot/ir_omni:
+          Value: false
+        locobot/laser_frame_link:
+          Value: false
+        locobot/left_finger_link:
+          Value: false
+        locobot/left_wheel:
+          Value: false
+        locobot/lidar_tower_link:
+          Value: false
+        locobot/lower_forearm_link:
+          Value: false
+        locobot/mouse:
+          Value: false
+        locobot/odom:
+          Value: false
+        locobot/pan_link:
+          Value: false
+        locobot/plate_link:
+          Value: false
+        locobot/right_finger_link:
+          Value: false
+        locobot/right_wheel:
+          Value: false
+        locobot/shoulder_link:
+          Value: false
+        locobot/tilt_link:
+          Value: false
+        locobot/upper_arm_link:
+          Value: false
+        locobot/upper_forearm_link:
+          Value: false
+        locobot/wheel_drop_left:
+          Value: false
+        locobot/wheel_drop_right:
+          Value: false
+        locobot/wrist_link:
+          Value: false
+        tag36h11:0:
+          Value: false
+        tag36h11:1:
+          Value: false
+        tag36h11:2:
+          Value: false
+        tag36h11:3:
+          Value: false
+        tag36h11:4:
+          Value: false
+        tag36h11:5:
+          Value: false
+        tag36h11:6:
+          Value: false
+        tag36h11:7:
+          Value: false
+        world:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          locobot/base_link:
+            cliff_front_left:
+              {}
+            cliff_front_right:
+              {}
+            cliff_side_left:
+              {}
+            cliff_side_right:
+              {}
+            locobot/bump_caster_link:
+              {}
+            locobot/bump_front_center:
+              {}
+            locobot/bump_front_left:
+              {}
+            locobot/bump_front_right:
+              {}
+            locobot/bump_left:
+              {}
+            locobot/bump_right:
+              {}
+            locobot/button_1:
+              {}
+            locobot/button_2:
+              {}
+            locobot/button_power:
+              {}
+            locobot/camera_tower_link:
+              locobot/lidar_tower_link:
+                locobot/laser_frame_link:
+                  {}
+              locobot/pan_link:
+                locobot/tilt_link:
+                  camera_locobot_link:
+                    camera_image_frame:
+                      {}
+                    locobot/camera_depth_link:
+                      {}
+            locobot/front_caster_link:
+              {}
+            locobot/imu_link:
+              {}
+            locobot/ir_intensity_front_center_left:
+              {}
+            locobot/ir_intensity_front_center_right:
+              {}
+            locobot/ir_intensity_front_left:
+              {}
+            locobot/ir_intensity_front_right:
+              {}
+            locobot/ir_intensity_left:
+              {}
+            locobot/ir_intensity_right:
+              {}
+            locobot/ir_intensity_side_left:
+              {}
+            locobot/ir_omni:
+              {}
+            locobot/mouse:
+              {}
+            locobot/plate_link:
+              locobot/arm_stand_link:
+                locobot/arm_base_link:
+                  locobot/shoulder_link:
+                    locobot/upper_arm_link:
+                      locobot/upper_forearm_link:
+                        locobot/lower_forearm_link:
+                          locobot/wrist_link:
+                            locobot/gripper_link:
+                              locobot/ee_arm_link:
+                                locobot/ar_tag_link:
+                                  {}
+                                locobot/gripper_bar_link:
+                                  locobot/fingers_link:
+                                    locobot/ee_gripper_link:
+                                      {}
+                                    locobot/left_finger_link:
+                                      {}
+                                    locobot/right_finger_link:
+                                      {}
+                                locobot/gripper_prop_link:
+                                  {}
+              locobot/battery_link:
+                {}
+      Update Interval: 0
+      Value: true
+    - Class: rviz_default_plugins/Camera
+      Enabled: true
+      Image Rendering: background and overlay
+      Name: Camera
+      Overlay Alpha: 0.5
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /locobot/camera_frame_sensor/image_raw
+      Value: true
+      Visibility:
+        Grid: true
+        Marker: true
+        MotionPlanning: true
+        Pose: true
+        TF: true
+        Value: true
+      Zoom Factor: 1
+    - Alpha: 1
+      Axes Length: 0.10000000149011612
+      Axes Radius: 0.009999999776482582
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /center_bl
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        pose_labels: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /visualization_marker
+      Value: true
+    - Alpha: 1
+      Axes Length: 0.10000000149011612
+      Axes Radius: 0.009999999776482582
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /center_br
+      Value: true
+    - Alpha: 1
+      Axes Length: 0.10000000149011612
+      Axes Radius: 0.009999999776482582
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /center_tl
+      Value: true
+    - Alpha: 1
+      Axes Length: 0.10000000149011612
+      Axes Radius: 0.009999999776482582
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /center_tr
+      Value: true
+    - Alpha: 1
+      Axes Length: 0.10000000149011612
+      Axes Radius: 0.009999999776482582
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /b_build_a
+      Value: true
+    - Alpha: 1
+      Axes Length: 0.10000000149011612
+      Axes Radius: 0.009999999776482582
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /b_build_b
+      Value: true
+    - Alpha: 1
+      Axes Length: 0.10000000149011612
+      Axes Radius: 0.009999999776482582
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /a_build_a
+      Value: true
+    - Alpha: 1
+      Axes Length: 0.10000000149011612
+      Axes Radius: 0.009999999776482582
+      Class: rviz_default_plugins/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.30000001192092896
+      Head Radius: 0.10000000149011612
+      Name: Pose
+      Shaft Length: 1
+      Shaft Radius: 0.05000000074505806
+      Shape: Axes
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /a_build_b
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 0; 176; 240
+    Fixed Frame: world
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Covariance x: 0.25
+      Covariance y: 0.25
+      Covariance yaw: 0.06853891909122467
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 3.0825424194335938
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0.6657202839851379
+        Y: 0.18006907403469086
+        Z: 0.14726494252681732
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.3153983950614929
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz_default_plugins)
+      Yaw: 4.810394287109375
+    Saved: ~
+Window Geometry:
+  Camera:
+    collapsed: false
+  Displays:
+    collapsed: false
+  Height: 729
+  Hide Left Dock: false
+  Hide Right Dock: false
+  MotionPlanning:
+    collapsed: false
+  MotionPlanning - Trajectory Slider:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd0000000400000000000002300000027dfc020000000cfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003e00000173000000ca00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c006900640065007200000001f9000000420000004200fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e00670000000131000001940000018900fffffffb0000000c00430061006d00650072006101000001b7000001040000002800ffffff000000010000010f00000330fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003e00000330000000a600fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006430000003efc0100000002fb0000000800540069006d0065000000000000000643000002b900fffffffb0000000800540069006d006501000000000000045000000000000000000000045a0000027d00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1680
+  X: 0
+  Y: 324
