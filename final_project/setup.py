@@ -11,7 +11,10 @@ data_files=[
     ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
     ('share/' + package_name, ['package.xml']),
     ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
-    ('share/' + package_name + '/model', glob('model/*.urdf'))
+    ('share/' + package_name + '/model', glob('model/*.urdf')),
+    ('share/' + package_name + '/worlds', glob('worlds/*.world')),
+    ('share/' + package_name + '/config', glob('config/*.rviz')),
+    ('share/' + package_name + '/pattern', glob('pattern/*.yaml')),
 ]
 
 setup(
@@ -19,7 +22,11 @@ setup(
     version='0.0.0',
     packages=[package_name],
     data_files=data_files,
-    install_requires=['setuptools', 'numpy', 'scipy'],
+    install_requires=[
+        'setuptools', 
+        'action_client', 
+        'ament_index_python'
+    ],
     zip_safe=True,
     maintainer='team 8',
     maintainer_email='awesome@stanford.edu',
@@ -33,8 +40,8 @@ setup(
             'static_frame_broadcaster = final_project.static_frame_broadcaster:main',
             'dummy_subscriber = final_project.dummy_subscriber:main',
             'pose_estimator = final_project.pose_estimator:main',
-            'world_publisher = final_project.world_publisher:main'
-
+            'world_publisher = final_project.world_publisher:main',
+            'state_machine = final_project.state_machine:main',
         ],
     }
 )

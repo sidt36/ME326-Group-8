@@ -8,38 +8,38 @@ from std_msgs.msg import Bool
 from project_messages.action import MoveToPose
 from action_msgs.msg import GoalStatus
 
-
-class StateMachine(Node):
+class MoveActionClient(Node):
 
     def __init__(self):
-        super().__init__('ActionClient')
+        super().__init__('move_base_client')
         self._action_client = ActionClient(self, MoveToPose, 'move_to_pose')
 
-    def send_goal(self, d):
+    def send_goal(self, cmd_x, cmd_y, cmd_yaw=None, yaw_req=False, yaw_only=False):
         goal_msg = MoveToPose.Goal()
 
         position  = Point()
-
-        position.x = float(d)
-        position.y = 0.0
-
+        position.x = cmd_x
+        position.y = cmd_y
         goal_msg.position = position
 
         yaw = Float64()
-        yaw.data = 0.2
+        if cmd_yaw == None:
+            yaw.data = 0.0
+        else:
+            yaw.data = cmd_yaw
         goal_msg.yaw = yaw.data
-        self.status = GoalStatus.STATUS_EXECUTING
-
-
+        
         orientation_required = Bool()
-        orientation_required.data = True
-
+        orientation_required.data = yaw_req
+        yaw_only_flag = Bool()
+        yaw_only_flag.data = yaw_only
+        
         goal_msg.orientation_required = orientation_required.data
-
+        goal_msg.yaw_only = yaw_only_flag.data
+        
+        self.status = GoalStatus.STATUS_EXECUTING        
         self._action_client.wait_for_server()
-
         self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback)
-
         self._send_goal_future.add_done_callback(self.goal_response_callback)
 
     def goal_response_callback(self, future):
@@ -48,9 +48,7 @@ class StateMachine(Node):
         if not goal_handle.accepted:
             self.get_logger().info('Goal rejected')
             return
-
         self.get_logger().info('Goal accepted')
-
         self._get_result_future = goal_handle.get_result_async()
         self._get_result_future.add_done_callback(self.get_result_callback)
 
@@ -58,32 +56,8 @@ class StateMachine(Node):
         result = future.result().result
         self.status = GoalStatus.STATUS_SUCCEEDED
         self.get_logger().info('Result: {0}'.format(result.pose_reached))
-        
 
     def feedback_callback(self, feedback_msg):
         feedback = feedback_msg.feedback
         self.get_logger().info('Received feedback: {0}'.format(feedback.feedback_string))
 
-
-
-def main(args=None):
-    rclpy.init(args=args)
-
-    action_client = StateMachine()
-
-    goals = [-1, -2, 2]
-
-    for goal in goals:
-
-        action_client.send_goal(goal)
-
-        while action_client.status != GoalStatus.STATUS_SUCCEEDED:
-            rclpy.spin_once(action_client)
-
-
-    rclpy.shutdown()
-
-
-
-if __name__ == '__main__':
-    main()

@@ -20,7 +20,7 @@ def generate_launch_description():
                 '-z', '0.0',
                 '-R', '0.0',
                 '-P', '0.0',
-                '-Y', '1.57'],
+                '-Y', '2.36'],
             output='screen'
         ),
         Node(
@@ -34,7 +34,7 @@ def generate_launch_description():
                 '-z', '0.0',
                 '-R', '0.0',
                 '-P', '0.0',
-                '-Y', '4.71'],
+                '-Y', '3.93'],
             output='screen'
         ),
         Node(
