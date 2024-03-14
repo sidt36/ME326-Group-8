@@ -20,7 +20,7 @@ def generate_launch_description():
                 '-z', '0.0',
                 '-R', '0.0',
                 '-P', '0.0',
-                '-Y', '0.0'],
+                '-Y', '1.57'],
             output='screen'
         ),
         Node(
@@ -34,7 +34,7 @@ def generate_launch_description():
                 '-z', '0.0',
                 '-R', '0.0',
                 '-P', '0.0',
-                '-Y', '3.1416'],
+                '-Y', '4.71'],
             output='screen'
         ),
         Node(
@@ -48,7 +48,7 @@ def generate_launch_description():
                 '-z', '0.0',
                 '-R', '0.0',
                 '-P', '0.0',
-                '-Y', '0.0'],
+                '-Y', '1.57'],
             output='screen'
         ),
         Node(
@@ -62,7 +62,7 @@ def generate_launch_description():
                 '-z', '0.0',
                 '-R', '0.0',
                 '-P', '0.0',
-                '-Y', '3.1416'],
+                '-Y', '4.71'],
             output='screen'
         ),
         Node(
@@ -76,7 +76,7 @@ def generate_launch_description():
                 '-z', '0.0',
                 '-R', '0.0',
                 '-P', '0.0',
-                '-Y', '0.0'],
+                '-Y', '1.57'],
             output='screen'
         ),
         Node(
@@ -90,7 +90,7 @@ def generate_launch_description():
                 '-z', '0.0',
                 '-R', '0.0',
                 '-P', '0.0',
-                '-Y', '0.0'],
+                '-Y', '1.57'],
             output='screen'
         ),
         Node(
@@ -104,7 +104,7 @@ def generate_launch_description():
                 '-z', '0.0',
                 '-R', '0.0',
                 '-P', '0.0',
-                '-Y', '0.0'],
+                '-Y', '1.57'],
             output='screen'
         ),
         Node(
@@ -118,7 +118,7 @@ def generate_launch_description():
                 '-z', '0.0',
                 '-R', '0.0',
                 '-P', '0.0',
-                '-Y', '0.0'],
+                '-Y', '1.57'],
             output='screen'
         ),
     ])

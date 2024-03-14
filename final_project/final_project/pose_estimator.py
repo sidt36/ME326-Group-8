@@ -3,6 +3,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from visualization_msgs.msg import Marker
 from tf2_ros import Buffer, TransformListener
+from rclpy.duration import Duration
 
 class PoseEstimatorNode(Node):
     def __init__(self):
@@ -27,8 +28,8 @@ class PoseEstimatorNode(Node):
         # The frame you want to express the pose in
         self.odom_frame = self.get_parameter('desired_pose_frame').get_parameter_value().string_value
         
-        self.tf_buffer = Buffer()
-        self.tf_listener = TransformListener(self.tf_buffer, self)
+        self.tf_buffer = Buffer(cache_time=rclpy.duration.Duration(seconds=5))
+        self.tf_listener = TransformListener(self.tf_buffer, self, qos=50)
         self.pose_publisher = self.create_publisher(PoseStamped, new_node_topic_name, 10)
         
         self.timer = self.create_timer(0.5, self.update_pose)
@@ -66,11 +67,12 @@ class PoseEstimatorNode(Node):
         self.publish_marker_with_pose()
 
     def update_pose(self):
+        now = self.get_clock().now() - Duration(seconds=0.1)
         try:
-            if self.tf_buffer.can_transform(self.odom_frame, self.tracked_tag_frame, rclpy.time.Time()):
+            if self.tf_buffer.can_transform(self.odom_frame, self.tracked_tag_frame, now):
                 # Look up the transform from the odom frame to the tag frame
                 # at the latest available time.
-                trans = self.tf_buffer.lookup_transform(self.odom_frame, self.tracked_tag_frame, rclpy.time.Time())
+                trans = self.tf_buffer.lookup_transform(self.odom_frame, self.tracked_tag_frame, now)
             
                 # Create a PoseStamped message to publish the pose
                 pose_stamped = PoseStamped()

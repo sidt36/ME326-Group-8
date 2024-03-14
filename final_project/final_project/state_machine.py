@@ -12,7 +12,6 @@ import tf_transformations
 from rclpy.executors import Future
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
-from geometry_msgs.msg import Pose
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.parameter import Parameter
 
@@ -25,7 +24,6 @@ from nav_msgs.msg import Odometry
 from rclpy.qos import qos_profile_sensor_data
 
 from gazebo_msgs.msg import ModelStates
-from gazebo_msgs.msg import LinkStates
 
 
 from action_msgs.msg import GoalStatus
@@ -106,14 +104,14 @@ class StateMachine(Node):
         
         self.mobile_camera_publisher = self.create_publisher(Float64MultiArray, CAM_CMD_MSG, 1)
         
-        # self.create_subscription(PoseStamped, '/center_tr', self.center_tr_callback, 10)
-        # self.create_subscription(PoseStamped, '/center_tl', self.center_tl_callback, 10)
-        # self.create_subscription(PoseStamped, '/center_br', self.center_br_callback, 10)
-        # self.create_subscription(PoseStamped, '/center_bl', self.center_bl_callback, 10)
-        # self.create_subscription(PoseStamped, '/a_build_a', self.a_build_a_callback, 10)
-        # self.create_subscription(PoseStamped, '/a_build_b', self.a_build_b_callback, 10)
-        # self.create_subscription(PoseStamped, '/b_build_a', self.b_build_a_callback, 10)
-        # self.create_subscription(PoseStamped, '/b_build_b', self.b_build_b_callback, 10)
+        self.create_subscription(PoseStamped, '/center_tr', self.center_tr_callback, 10)
+        self.create_subscription(PoseStamped, '/center_tl', self.center_tl_callback, 10)
+        self.create_subscription(PoseStamped, '/center_br', self.center_br_callback, 10)
+        self.create_subscription(PoseStamped, '/center_bl', self.center_bl_callback, 10)
+        self.create_subscription(PoseStamped, '/a_build_a', self.a_build_a_callback, 10)
+        self.create_subscription(PoseStamped, '/a_build_b', self.a_build_b_callback, 10)
+        self.create_subscription(PoseStamped, '/b_build_a', self.b_build_a_callback, 10)
+        self.create_subscription(PoseStamped, '/b_build_b', self.b_build_b_callback, 10)
         
         self.create_subscription(
             ModelStates,
@@ -333,41 +331,41 @@ class StateMachine(Node):
         msg = Float64MultiArray()
         msg.data = [pan, tilt]
         self.mobile_camera_publisher.publish(msg)
-        rclpy.spin_until_future_complete(self, Future(), timeout_sec=0.75)
+        rclpy.spin_until_future_complete(self, Future(), timeout_sec=2.5)
 
-    def find_april_tags(self, list_of_poses=[[-1.0, 0.0, 0.0]]):
+    def find_april_tags(self, 
+            list_of_poses=[[0.0, 0.0, 0.0], [0.0, 0.0, 2.09], [0.0, 0.0, 4.19]]):
         # Attempt to find the april tags.
         # We will accomplish this by first panning the camera, then we will rotate the base
         # and move the camera again.
         
         self.move_arm_named_pose('Sleep')
         
-        #! Sim use only!
-        self.set_april_poses()
-        
-        # self.move_camera(0.0, 0.35) # down ~20 deg, straight ahead
-        # self.move_camera(0.5, 0.35) # down ~20 deg, left ~30 degrees
-        # self.move_camera(-0.5, 0.35) # down ~20 deg, right ~30 degrees
-        # # self.move_camera(1.4, 0.35) # down ~20 deg, left ~80 degrees
-        # # self.move_camera(-1.4, 0.35) # down ~20 deg, right ~80 degrees
-        # self.move_camera(0.0, 0.0) # Straight ahead
-        
-        # # Move the base and then lookaround again
-        # for pose_i in list_of_poses:
-        #     goal = [pose_i[0], pose_i[1], pose_i[2], True, False]
-        #     self.move_to_goal(goal)
-            
-        #     self.move_camera(0.0, 0.35) # down ~20 deg, straight ahead
-        #     self.move_camera(0.5, 0.35) # down ~20 deg, left ~30 degrees
-        #     self.move_camera(-0.5, 0.35) # down ~20 deg, right ~30 degrees
-        #     # self.move_camera(1.4, 0.35) # down ~20 deg, left ~80 degrees
-        #     # self.move_camera(-1.4, 0.35) # down ~20 deg, right ~80 degrees
-        #     self.move_camera(0.0, 0.0) # Straight ahead
-        
-        # # Rotate the base 180 degrees (yaw to 0)
-        # goal = [0.0, 0.0, 0.0, True, False]
-        # self.move_to_goal(goal)
+        #! Use for test only!
+        # self.set_april_poses()
 
+        # Move the base and then lookaround again
+        for pose_i in list_of_poses:
+            goal = [pose_i[0], pose_i[1], pose_i[2], False, True]
+            self.move_to_goal(goal)
+            rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
+            self.move_camera(0.0, 0.35) # down ~20 deg, straight ahead
+            rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
+            self.move_camera(0.5, 0.35) # down ~20 deg, left ~30 degrees
+            rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
+            self.move_camera(-0.5, 0.35) # down ~20 deg, right ~30 degrees
+            rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
+            self.move_camera(0.5, 0.75) # down ~20 deg, left ~60 degrees
+            rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
+            self.move_camera(-0.5, 0.75) # down ~20 deg, right ~60 degrees
+            rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
+            self.move_camera(0.0, 0.0) # Straight ahead
+            rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.0)
+        
+        # Rotate the base back to straight
+        goal = [0.0, 0.0, 0.0, False, True]
+        self.move_to_goal(goal)
+        rclpy.spin_until_future_complete(self, Future(), timeout_sec=3.0)
         
         # Verify we found the list of positions
         all_tags_found = True
@@ -375,6 +373,12 @@ class StateMachine(Node):
             if getattr(self, f'{position}_pose') is None:
                 self.logger.warn(f"Did not find {position}")
                 all_tags_found = False
+        
+        if all_tags_found:
+            self.destroy_april_tag_subscriptions()
+            self.logger.info("All tags found!")
+        else:
+            self.logger.info("Not all tags found")
 
 
     def world_to_locobot_frame(self, pos_in_world):
@@ -509,7 +513,7 @@ class StateMachine(Node):
         
             self.move_next_to_center_box(0.25, perp_margin)
             
-            rclpy.spin_until_future_complete(self, Future(), timeout_sec=1.5)
+            rclpy.spin_until_future_complete(self, Future(), timeout_sec=2.5)
             now = self.get_clock().now().to_msg()
             rclpy.spin_until_future_complete(self, Future(), timeout_sec=0.2)
             
