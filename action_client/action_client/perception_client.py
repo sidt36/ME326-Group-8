@@ -20,8 +20,6 @@ class PerceptionClient(Node):
             self.get_logger().info('service not available, waiting again...')
             
         self.req = Ptps.Request()
-        self.done_event = None
-        block_pos = None
 
     def send_request(self, frame):
         self.req.desired_frame = frame
@@ -35,9 +33,8 @@ class PerceptionClient(Node):
         Returns: R G B Y List[X, Y, Z] or None if not found
         This function is used to call the perception service and get the closest blocks to the camera.
         '''
-        
-        self.done_event = Future()
-        self.block_pos = None
+
+        block_pos = None
         
         max_tries = 5
         tries = 0
@@ -85,7 +82,7 @@ class PerceptionClient(Node):
         else:
             # Thow an error for invalid block color
             self.get_logger().error('Invalid block color')
-            self.block_pos = None
+            block_pos = None
             
         if len(points) > 0:
             min_distance = 100000
@@ -100,9 +97,88 @@ class PerceptionClient(Node):
                 if(distance < min_distance):
                     min_distance = distance
                     closest_block = [pose_in_locobot_frame.position.x, pose_in_locobot_frame.position.y, pose_in_locobot_frame.position.z]
-            self.block_pos = closest_block
+            block_pos = closest_block
         else:
-            self.block_pos = None
+            block_pos = None
             self.get_logger().warn(f'No {block_color} cubes found')
         
-        self.done_event.set_result(True)
+        return block_pos
+    
+    def all_blocks_world(self, tf_buffer, tf_time):
+
+        max_tries = 5
+        tries = 0        
+        any_present = True
+        total_points = 0
+        
+        while (any_present and total_points == 0) and tries < max_tries:
+            
+            self.send_request('locobot/camera_depth_link')
+            rclpy.spin_until_future_complete(self, self.future)
+
+            response = self.future.result()
+
+            red_points = response.red_points
+            blue_points = response.blue_points
+            green_points = response.green_points
+            yellow_points = response.yellow_points
+            
+            any_present = response.red_present or response.blue_present or response.green_present or response.yellow_present
+            total_points = len(red_points) + len(blue_points) + len(green_points) + len(yellow_points)
+            
+            self.get_logger().info(f'Any blocks present: {any_present}')
+            self.get_logger().info(f'Total blocks present: {total_points}')
+            
+            tries = tries + 1
+            
+            if (any_present and total_points == 0):
+                self.get_logger().info('No points found, trying again. Try: ' + str(tries))
+            
+            if not any_present:
+                break
+        
+        transform = tf_buffer.lookup_transform('world', 'locobot/camera_depth_link', tf_time)
+        self.get_logger().info(f'Transform obtained: {transform}')
+        
+        red_points_tfd = []
+        blue_points_tfd = []
+        green_points_tfd = []
+        yellow_points_tfd = []
+        
+        if len(red_points) > 0:
+            for point in red_points:
+                pose = Pose()
+                pose.position.x = point.point.x
+                pose.position.y = point.point.y
+                pose.position.z = point.point.z
+                pose_in_locobot_frame = tf2_geometry_msgs.do_transform_pose(pose, transform)
+                red_points_tfd.append([pose_in_locobot_frame.position.x, pose_in_locobot_frame.position.y, pose_in_locobot_frame.position.z])
+        
+        if len(blue_points) > 0:
+            for point in blue_points:
+                pose = Pose()
+                pose.position.x = point.point.x
+                pose.position.y = point.point.y
+                pose.position.z = point.point.z
+                pose_in_locobot_frame = tf2_geometry_msgs.do_transform_pose(pose, transform)
+                blue_points_tfd.append([pose_in_locobot_frame.position.x, pose_in_locobot_frame.position.y, pose_in_locobot_frame.position.z])
+        
+        if len(green_points) > 0:
+            for point in green_points:
+                pose = Pose()
+                pose.position.x = point.point.x
+                pose.position.y = point.point.y
+                pose.position.z = point.point.z
+                pose_in_locobot_frame = tf2_geometry_msgs.do_transform_pose(pose, transform)
+                green_points_tfd.append([pose_in_locobot_frame.position.x, pose_in_locobot_frame.position.y, pose_in_locobot_frame.position.z])
+        
+        if len(yellow_points) > 0:
+            for point in yellow_points:
+                pose = Pose()
+                pose.position.x = point.point.x
+                pose.position.y = point.point.y
+                pose.position.z = point.point.z
+                pose_in_locobot_frame = tf2_geometry_msgs.do_transform_pose(pose, transform)
+                yellow_points_tfd.append([pose_in_locobot_frame.position.x, pose_in_locobot_frame.position.y, pose_in_locobot_frame.position.z])
+    
+        return red_points_tfd, blue_points_tfd, green_points_tfd, yellow_points_tfd

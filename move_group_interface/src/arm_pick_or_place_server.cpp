@@ -215,7 +215,7 @@ private:
     // Release pose: slightly above the grasp pose
     poses.release.position.x = block_pose.position.x;
     poses.release.position.y = block_pose.position.y;
-    poses.release.position.z = block_pose.position.z + 0.05; // 5 cm above, similar to pre-grasp
+    poses.release.position.z = block_pose.position.z + 0.04; // 4 cm above, similar to pre-grasp
 
     return poses;
   }

@@ -455,4 +455,60 @@ def generate_launch_description():
                 '-Y', '0.0'],
             output='screen'
         ),
+        Node(
+            package='gazebo_ros',
+            executable='spawn_entity.py',
+            arguments=[
+                '-entity', 'red_cube9', 
+                '-file', f'{model_path}/red_cube.urdf',
+                '-x', '1.8', 
+                '-y', '-0.925', 
+                '-z', '0.1',
+                '-R', '0.0',
+                '-P', '0.0',
+                '-Y', '0.0'],
+            output='screen'
+        ),
+        Node(
+            package='gazebo_ros',
+            executable='spawn_entity.py',
+            arguments=[
+                '-entity', 'red_cube10', 
+                '-file', f'{model_path}/red_cube.urdf',
+                '-x', '1.8', 
+                '-y', '-1.005', 
+                '-z', '0.1',
+                '-R', '0.0',
+                '-P', '0.0',
+                '-Y', '0.0'],
+            output='screen'
+        ),
+        Node(
+            package='gazebo_ros',
+            executable='spawn_entity.py',
+            arguments=[
+                '-entity', 'blue_cube9', 
+                '-file', f'{model_path}/blue_cube.urdf',
+                '-x', '1.7', 
+                '-y', '-0.925', 
+                '-z', '0.1',
+                '-R', '0.0',
+                '-P', '0.0',
+                '-Y', '0.0'],
+            output='screen'
+        ),
+        Node(
+            package='gazebo_ros',
+            executable='spawn_entity.py',
+            arguments=[
+                '-entity', 'blue_cube10', 
+                '-file', f'{model_path}/blue_cube.urdf',
+                '-x', '1.7', 
+                '-y', '-1.005', 
+                '-z', '0.1',
+                '-R', '0.0',
+                '-P', '0.0',
+                '-Y', '0.0'],
+            output='screen'
+        ),
     ])
